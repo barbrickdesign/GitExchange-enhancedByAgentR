@@ -8,7 +8,7 @@
 
 Every repo is a ticker. Every issue is a trade. No signup, no wallet -- just your GitHub account.
 
-🟢 **Market OPEN** | Total Cap: $3.15M | 19 Stocks | 2 Traders | Last Update: 2026-04-30 18:42 UTC
+🟢 **Market OPEN** | Total Cap: $3.24M | 20 Stocks | 2 Traders | Last Update: 2026-05-01 00:27 UTC
 
 📈 **Top Gainer**: DENO +28.37% ($625.96) | 📉 **Top Loser**: REACT -6.53% ($500.24)
 
@@ -75,6 +75,7 @@ Pick a stock and open a trade in one click:
 | **PRETEXT** | chenglou/pretext | $200.60 | 🔴 -1.17% | 0 | $100.3K | [Buy](https://github.com/SolanaLeeky/GitExchange/issues/new?title=BUY+pretext+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SELL+pretext+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SHORT+pretext+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **CLI** | googleworkspace/cli | $198.94 | 🟢 +0.10% | 0 | $99.5K | [Buy](https://github.com/SolanaLeeky/GitExchange/issues/new?title=BUY+cli+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SELL+cli+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SHORT+cli+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **CLIANYTHING** | HKUDS/CLI-Anything | $168.03 | 🟢 +0.18% | 5 | $84.0K | [Buy](https://github.com/SolanaLeeky/GitExchange/issues/new?title=BUY+clianything+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SELL+clianything+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SHORT+clianything+10&body=Adjust+quantity+in+the+title+then+submit) |
+| **NUWASKILL** | alchaincyf/nuwa-skill | $165.67 | ⚪ 0.00% | 0 | $82.8K | [Buy](https://github.com/SolanaLeeky/GitExchange/issues/new?title=BUY+nuwaskill+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SELL+nuwaskill+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SHORT+nuwaskill+10&body=Adjust+quantity+in+the+title+then+submit) |
 
 ---
 
@@ -82,7 +83,7 @@ Pick a stock and open a trade in one click:
 
 | Rank | Trader | Portfolio Value | P&L | Trades | Achievements |
 |------|--------|-----------------|-----|--------|--------------|
-| 🥇 | @SolanaLeeky | $12,194.45 | +$2,194.45 (+21.9%) | 12 | 🦊 🎯 🐦 🔔 💎 |
+| 🥇 | @SolanaLeeky | $12,219.42 | +$2,219.42 (+22.2%) | 12 | 🦊 🎯 🐦 🔔 💎 |
 | 🥈 | @neurobytex | $8,731.18 | -$1,268.82 (-12.7%) | 1 | 🎯 💎 🦊 |
 
 ---
