@@ -1,0 +1,31 @@
+{
+  "date": "2026-05-03",
+  "events": [
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.96,
+      "total_paid": 11.88,
+      "recipients": 1,
+      "commits_week": 528,
+      "timestamp": "2026-05-03T00:23:45Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.69,
+      "total_paid": 13.45,
+      "recipients": 1,
+      "commits_week": 80,
+      "timestamp": "2026-05-03T00:23:45Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "opendesign",
+      "full_name": "nexu-io/open-design",
+      "initial_price": 261.93,
+      "stars_at_ipo": 15998,
+      "timestamp": "2026-05-03T00:23:45Z"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-02T18:23:34Z",
+  "last_updated": "2026-05-03T00:23:45Z",
   "market_status": "open",
-  "total_market_cap": 3385495.0,
+  "total_market_cap": 3516460.0,
   "stocks": {
     "react": {
       "full_name": "facebook/react",
@@ -388,6 +388,26 @@
         "commits_week": 0,
         "issue_response_hrs": 167.2,
         "contributors": 1
+      },
+      "tags": [
+        "ipo-new"
+      ]
+    },
+    "opendesign": {
+      "full_name": "nexu-io/open-design",
+      "price": 261.93,
+      "prev_price": 261.93,
+      "change_pct": 0.0,
+      "volume_24h": 0,
+      "market_cap": 130965.0,
+      "shares_outstanding": 500,
+      "ipo_date": "2026-05-03",
+      "metrics": {
+        "stars": 15998,
+        "forks": 1806,
+        "commits_week": 147,
+        "issue_response_hrs": 26.6,
+        "contributors": 59
       },
       "tags": [
         "ipo-new"
