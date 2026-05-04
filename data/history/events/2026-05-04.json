@@ -1,0 +1,30 @@
+{
+  "date": "2026-05-04",
+  "events": [
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 3.59,
+      "total_paid": 17.95,
+      "recipients": 1,
+      "commits_week": 69,
+      "timestamp": "2026-05-04T00:27:28Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "gbrain",
+      "full_name": "garrytan/gbrain",
+      "initial_price": 178.47,
+      "stars_at_ipo": 12950,
+      "timestamp": "2026-05-04T00:27:28Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "awesomegptimage2apiandprompts",
+      "full_name": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "initial_price": 169.64,
+      "stars_at_ipo": 11794,
+      "timestamp": "2026-05-04T00:27:28Z"
+    }
+  ]
+}
