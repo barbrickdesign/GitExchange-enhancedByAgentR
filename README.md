@@ -8,7 +8,7 @@
 
 Every repo is a ticker. Every issue is a trade. No signup, no wallet -- just your GitHub account.
 
-🟢 **Market OPEN** | Total Cap: $3.68M | 23 Stocks | 2 Traders | Last Update: 2026-05-04 22:14 UTC
+🟢 **Market OPEN** | Total Cap: $3.93M | 26 Stocks | 2 Traders | Last Update: 2026-05-05 02:16 UTC
 
 📈 **Top Gainer**: DENO +32.41% ($677.87) | 📉 **Top Loser**: OPENDESIGN -48.70% ($207.44)
 
@@ -77,7 +77,10 @@ Pick a stock and open a trade in one click:
 | **CLI** | googleworkspace/cli | $197.03 | 🟢 +0.35% | 0 | $98.5K | [Buy](https://github.com/SolanaLeeky/GitExchange/issues/new?title=BUY+cli+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SELL+cli+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SHORT+cli+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **PRETEXT** | chenglou/pretext | $196.80 | 🔴 -8.81% | 0 | $98.4K | [Buy](https://github.com/SolanaLeeky/GitExchange/issues/new?title=BUY+pretext+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SELL+pretext+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SHORT+pretext+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **NUWASKILL** | alchaincyf/nuwa-skill | $170.01 | 🔴 -2.43% | 0 | $85.0K | [Buy](https://github.com/SolanaLeeky/GitExchange/issues/new?title=BUY+nuwaskill+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SELL+nuwaskill+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SHORT+nuwaskill+10&body=Adjust+quantity+in+the+title+then+submit) |
+| **DESIGNMD** | google-labs-code/design.md | $168.79 | ⚪ 0.00% | 0 | $84.4K | [Buy](https://github.com/SolanaLeeky/GitExchange/issues/new?title=BUY+designmd+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SELL+designmd+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SHORT+designmd+10&body=Adjust+quantity+in+the+title+then+submit) |
+| **OPENMYTHOS** | kyegomez/OpenMythos | $167.97 | ⚪ 0.00% | 0 | $84.0K | [Buy](https://github.com/SolanaLeeky/GitExchange/issues/new?title=BUY+openmythos+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SELL+openmythos+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SHORT+openmythos+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **GBRAIN** | garrytan/gbrain | $166.99 | 🔴 -11.61% | 0 | $83.5K | [Buy](https://github.com/SolanaLeeky/GitExchange/issues/new?title=BUY+gbrain+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SELL+gbrain+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SHORT+gbrain+10&body=Adjust+quantity+in+the+title+then+submit) |
+| **HUASHUDESIGN** | alchaincyf/huashu-design | $166.25 | ⚪ 0.00% | 0 | $83.1K | [Buy](https://github.com/SolanaLeeky/GitExchange/issues/new?title=BUY+huashudesign+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SELL+huashudesign+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SHORT+huashudesign+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **AWESOMEGPTIMAGE2APIANDPROMPTS** | EvoLinkAI/awesome-gpt-image-2-API-and-Prompts | $163.32 | 🔴 -5.91% | 0 | $81.7K | [Buy](https://github.com/SolanaLeeky/GitExchange/issues/new?title=BUY+awesomegptimage2apiandprompts+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SELL+awesomegptimage2apiandprompts+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/SolanaLeeky/GitExchange/issues/new?title=SHORT+awesomegptimage2apiandprompts+10&body=Adjust+quantity+in+the+title+then+submit) |
 
 ---
@@ -86,7 +89,7 @@ Pick a stock and open a trade in one click:
 
 | Rank | Trader | Portfolio Value | P&L | Trades | Achievements |
 |------|--------|-----------------|-----|--------|--------------|
-| 🥇 | @SolanaLeeky | $12,360.15 | +$2,360.15 (+23.6%) | 12 | 🦊 🎯 🐦 🔔 💎 |
+| 🥇 | @SolanaLeeky | $12,371.55 | +$2,371.55 (+23.7%) | 12 | 🦊 🎯 🐦 🔔 💎 |
 | 🥈 | @neurobytex | $9,343.03 | -$656.97 (-6.6%) | 1 | 🎯 💎 🦊 |
 
 ---

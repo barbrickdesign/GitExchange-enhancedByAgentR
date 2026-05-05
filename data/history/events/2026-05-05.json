@@ -1,0 +1,38 @@
+{
+  "date": "2026-05-05",
+  "events": [
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.8,
+      "total_paid": 11.4,
+      "recipients": 1,
+      "commits_week": 74,
+      "timestamp": "2026-05-05T02:16:31Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "huashudesign",
+      "full_name": "alchaincyf/huashu-design",
+      "initial_price": 166.25,
+      "stars_at_ipo": 11838,
+      "timestamp": "2026-05-05T02:16:31Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "openmythos",
+      "full_name": "kyegomez/OpenMythos",
+      "initial_price": 167.97,
+      "stars_at_ipo": 11683,
+      "timestamp": "2026-05-05T02:16:31Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "designmd",
+      "full_name": "google-labs-code/design.md",
+      "initial_price": 168.79,
+      "stars_at_ipo": 11543,
+      "timestamp": "2026-05-05T02:16:31Z"
+    }
+  ]
+}
