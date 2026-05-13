@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-12T21:16:02Z",
+  "last_updated": "2026-05-13T00:28:54Z",
   "market_status": "open",
-  "total_market_cap": 3877035.0,
+  "total_market_cap": 3966400.0,
   "stocks": {
     "react": {
       "full_name": "facebook/react",
@@ -508,6 +508,26 @@
         "commits_week": 1,
         "issue_response_hrs": 209.2,
         "contributors": 14
+      },
+      "tags": [
+        "ipo-new"
+      ]
+    },
+    "browserharness": {
+      "full_name": "browser-use/browser-harness",
+      "price": 178.73,
+      "prev_price": 178.73,
+      "change_pct": 0.0,
+      "volume_24h": 0,
+      "market_cap": 89365.0,
+      "shares_outstanding": 500,
+      "ipo_date": "2026-05-13",
+      "metrics": {
+        "stars": 12318,
+        "forks": 1124,
+        "commits_week": 1,
+        "issue_response_hrs": 107.8,
+        "contributors": 54
       },
       "tags": [
         "ipo-new"
