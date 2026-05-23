@@ -1,110 +1,110 @@
 {
-  "last_updated": "2026-05-15T00:27:15Z",
+  "last_updated": "2026-05-23T06:08:17Z",
   "market_status": "open",
-  "total_market_cap": 3990445.0,
+  "total_market_cap": 3933935.0,
   "stocks": {
     "react": {
       "full_name": "facebook/react",
-      "price": 489.23,
-      "prev_price": 599.09,
-      "change_pct": -18.34,
+      "price": 640.21,
+      "prev_price": 489.23,
+      "change_pct": 30.86,
       "volume_24h": 22,
-      "market_cap": 244615.0,
+      "market_cap": 320105.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-03-22",
       "metrics": {
-        "stars": 245019,
-        "forks": 51037,
-        "commits_week": 2,
-        "issue_response_hrs": 5081.1,
-        "contributors": 411
+        "stars": 245187,
+        "forks": 51091,
+        "commits_week": 1,
+        "issue_response_hrs": 2726.3,
+        "contributors": 410
       },
       "tags": []
     },
     "vscode": {
       "full_name": "microsoft/vscode",
-      "price": 782.15,
-      "prev_price": 757.69,
-      "change_pct": 3.23,
+      "price": 603.9,
+      "prev_price": 782.15,
+      "change_pct": -22.79,
       "volume_24h": 3,
-      "market_cap": 391075.0,
+      "market_cap": 301950.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-03-22",
       "metrics": {
-        "stars": 184924,
-        "forks": 39837,
-        "commits_week": 350,
-        "issue_response_hrs": 230.4,
+        "stars": 185235,
+        "forks": 40061,
+        "commits_week": 487,
+        "issue_response_hrs": 10727.6,
         "contributors": 325
       },
       "tags": []
     },
     "deno": {
       "full_name": "denoland/deno",
-      "price": 331.53,
-      "prev_price": 331.24,
-      "change_pct": 0.09,
+      "price": 533.37,
+      "prev_price": 331.53,
+      "change_pct": 60.88,
       "volume_24h": 2,
-      "market_cap": 165765.0,
+      "market_cap": 266685.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-03-22",
       "metrics": {
-        "stars": 106689,
-        "forks": 6058,
-        "commits_week": 63,
-        "issue_response_hrs": 5419.8,
+        "stars": 106820,
+        "forks": 6066,
+        "commits_week": 122,
+        "issue_response_hrs": 168.0,
         "contributors": 430
       },
       "tags": []
     },
     "nextjs": {
       "full_name": "vercel/next.js",
-      "price": 470.18,
-      "prev_price": 548.39,
-      "change_pct": -14.26,
+      "price": 578.22,
+      "prev_price": 470.18,
+      "change_pct": 22.98,
       "volume_24h": 5,
-      "market_cap": 235090.0,
+      "market_cap": 289110.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-03-22",
       "metrics": {
-        "stars": 139464,
-        "forks": 31069,
-        "commits_week": 47,
-        "issue_response_hrs": 1782.1,
+        "stars": 139563,
+        "forks": 31113,
+        "commits_week": 77,
+        "issue_response_hrs": 168.0,
         "contributors": 428
       },
       "tags": []
     },
     "svelte": {
       "full_name": "sveltejs/svelte",
-      "price": 398.74,
-      "prev_price": 409.95,
-      "change_pct": -2.73,
+      "price": 365.51,
+      "prev_price": 398.74,
+      "change_pct": -8.33,
       "volume_24h": 6,
-      "market_cap": 199370.0,
+      "market_cap": 182755.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-03-22",
       "metrics": {
-        "stars": 86566,
-        "forks": 4915,
-        "commits_week": 8,
-        "issue_response_hrs": 270.9,
+        "stars": 86623,
+        "forks": 4923,
+        "commits_week": 26,
+        "issue_response_hrs": 3573.0,
         "contributors": 410
       },
       "tags": []
     },
     "autoresearch": {
       "full_name": "karpathy/autoresearch",
-      "price": 272.63,
-      "prev_price": 260.13,
-      "change_pct": 4.81,
+      "price": 272.0,
+      "prev_price": 272.63,
+      "change_pct": -0.23,
       "volume_24h": 0,
-      "market_cap": 136315.0,
+      "market_cap": 136000.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-03-22",
       "metrics": {
-        "stars": 81073,
-        "forks": 11788,
+        "stars": 82787,
+        "forks": 12015,
         "commits_week": 0,
         "issue_response_hrs": 168.0,
         "contributors": 9
@@ -115,18 +115,18 @@
     },
     "gstack": {
       "full_name": "garrytan/gstack",
-      "price": 293.79,
-      "prev_price": 296.1,
-      "change_pct": -0.78,
+      "price": 303.59,
+      "prev_price": 293.79,
+      "change_pct": 3.34,
       "volume_24h": 20,
-      "market_cap": 146895.0,
+      "market_cap": 151795.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-03-22",
       "metrics": {
-        "stars": 96535,
-        "forks": 14353,
-        "commits_week": 9,
-        "issue_response_hrs": 111.3,
+        "stars": 100909,
+        "forks": 15027,
+        "commits_week": 0,
+        "issue_response_hrs": 107.2,
         "contributors": 9
       },
       "tags": [
@@ -135,19 +135,19 @@
     },
     "paperclip": {
       "full_name": "paperclipai/paperclip",
-      "price": 282.42,
-      "prev_price": 295.83,
-      "change_pct": -4.53,
+      "price": 282.06,
+      "prev_price": 282.42,
+      "change_pct": -0.13,
       "volume_24h": 0,
-      "market_cap": 141210.0,
+      "market_cap": 141030.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-03-22",
       "metrics": {
-        "stars": 65398,
-        "forks": 11860,
-        "commits_week": 29,
-        "issue_response_hrs": 168.0,
-        "contributors": 84
+        "stars": 67165,
+        "forks": 12324,
+        "commits_week": 0,
+        "issue_response_hrs": 80.8,
+        "contributors": 85
       },
       "tags": [
         "ipo-new"
@@ -155,18 +155,18 @@
     },
     "cli": {
       "full_name": "googleworkspace/cli",
-      "price": 197.67,
-      "prev_price": 197.85,
-      "change_pct": -0.09,
+      "price": 198.31,
+      "prev_price": 197.67,
+      "change_pct": 0.32,
       "volume_24h": 0,
-      "market_cap": 98835.0,
+      "market_cap": 99155.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-03-22",
       "metrics": {
-        "stars": 26212,
-        "forks": 1365,
+        "stars": 26506,
+        "forks": 1387,
         "commits_week": 0,
-        "issue_response_hrs": 0.0,
+        "issue_response_hrs": 4.9,
         "contributors": 43
       },
       "tags": [
@@ -175,19 +175,19 @@
     },
     "clianything": {
       "full_name": "HKUDS/CLI-Anything",
-      "price": 235.08,
-      "prev_price": 228.46,
-      "change_pct": 2.9,
+      "price": 216.26,
+      "prev_price": 235.08,
+      "change_pct": -8.01,
       "volume_24h": 5,
-      "market_cap": 117540.0,
+      "market_cap": 108130.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-03-22",
       "metrics": {
-        "stars": 34448,
-        "forks": 3374,
-        "commits_week": 18,
-        "issue_response_hrs": 168.0,
-        "contributors": 75
+        "stars": 39588,
+        "forks": 3742,
+        "commits_week": 0,
+        "issue_response_hrs": 601.7,
+        "contributors": 83
       },
       "tags": [
         "ipo-new"
@@ -195,18 +195,18 @@
     },
     "pretext": {
       "full_name": "chenglou/pretext",
-      "price": 211.81,
-      "prev_price": 206.88,
-      "change_pct": 2.38,
+      "price": 212.58,
+      "prev_price": 211.81,
+      "change_pct": 0.36,
       "volume_24h": 0,
-      "market_cap": 105905.0,
+      "market_cap": 106290.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-04-01",
       "metrics": {
-        "stars": 46914,
-        "forks": 2595,
-        "commits_week": 3,
-        "issue_response_hrs": 263.4,
+        "stars": 47396,
+        "forks": 2627,
+        "commits_week": 0,
+        "issue_response_hrs": 255.9,
         "contributors": 7
       },
       "tags": [
@@ -215,19 +215,19 @@
     },
     "nemoclaw": {
       "full_name": "NVIDIA/NemoClaw",
-      "price": 303.36,
-      "prev_price": 284.34,
-      "change_pct": 6.69,
+      "price": 209.31,
+      "prev_price": 303.36,
+      "change_pct": -31.0,
       "volume_24h": 0,
-      "market_cap": 151680.0,
+      "market_cap": 104655.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-04-05",
       "metrics": {
-        "stars": 20414,
-        "forks": 2660,
-        "commits_week": 108,
-        "issue_response_hrs": 71.7,
-        "contributors": 115
+        "stars": 20606,
+        "forks": 2720,
+        "commits_week": 0,
+        "issue_response_hrs": 211.3,
+        "contributors": 117
       },
       "tags": [
         "ipo-new"
@@ -235,19 +235,19 @@
     },
     "openclaude": {
       "full_name": "Gitlawb/openclaude",
-      "price": 255.79,
-      "prev_price": 245.46,
-      "change_pct": 4.21,
+      "price": 216.95,
+      "prev_price": 255.79,
+      "change_pct": -15.18,
       "volume_24h": 0,
-      "market_cap": 127895.0,
+      "market_cap": 108475.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-04-06",
       "metrics": {
-        "stars": 26656,
-        "forks": 8442,
-        "commits_week": 34,
-        "issue_response_hrs": 47.6,
-        "contributors": 106
+        "stars": 27502,
+        "forks": 8565,
+        "commits_week": 0,
+        "issue_response_hrs": 681.0,
+        "contributors": 112
       },
       "tags": [
         "ipo-new"
@@ -255,18 +255,18 @@
     },
     "awesomedesignmd": {
       "full_name": "VoltAgent/awesome-design-md",
-      "price": 260.92,
-      "prev_price": 251.78,
-      "change_pct": 3.63,
+      "price": 264.48,
+      "prev_price": 260.92,
+      "change_pct": 1.36,
       "volume_24h": 0,
-      "market_cap": 130460.0,
+      "market_cap": 132240.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-04-07",
       "metrics": {
-        "stars": 78680,
-        "forks": 9509,
-        "commits_week": 1,
-        "issue_response_hrs": 215.7,
+        "stars": 82817,
+        "forks": 9961,
+        "commits_week": 0,
+        "issue_response_hrs": 168.0,
         "contributors": 4
       },
       "tags": [
@@ -275,19 +275,19 @@
     },
     "mempalace": {
       "full_name": "milla-jovovich/mempalace",
-      "price": 270.66,
-      "prev_price": 261.74,
-      "change_pct": 3.41,
+      "price": 233.02,
+      "prev_price": 270.66,
+      "change_pct": -13.91,
       "volume_24h": 0,
-      "market_cap": 135330.0,
+      "market_cap": 116510.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-04-09",
       "metrics": {
-        "stars": 52191,
-        "forks": 6887,
-        "commits_week": 25,
-        "issue_response_hrs": 1.5,
-        "contributors": 69
+        "stars": 52681,
+        "forks": 6949,
+        "commits_week": 0,
+        "issue_response_hrs": 168.0,
+        "contributors": 76
       },
       "tags": [
         "ipo-new"
@@ -295,19 +295,19 @@
     },
     "careerops": {
       "full_name": "santifer/career-ops",
-      "price": 227.46,
-      "prev_price": 225.88,
-      "change_pct": 0.7,
+      "price": 238.0,
+      "prev_price": 227.46,
+      "change_pct": 4.63,
       "volume_24h": 0,
-      "market_cap": 113730.0,
+      "market_cap": 119000.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-04-09",
       "metrics": {
-        "stars": 44691,
-        "forks": 9384,
-        "commits_week": 7,
-        "issue_response_hrs": 227.6,
-        "contributors": 41
+        "stars": 46747,
+        "forks": 9769,
+        "commits_week": 0,
+        "issue_response_hrs": 678.2,
+        "contributors": 58
       },
       "tags": [
         "ipo-new"
@@ -315,19 +315,19 @@
     },
     "graphify": {
       "full_name": "safishamsi/graphify",
-      "price": 240.34,
-      "prev_price": 247.31,
-      "change_pct": -2.82,
+      "price": 236.38,
+      "prev_price": 240.34,
+      "change_pct": -1.65,
       "volume_24h": 0,
-      "market_cap": 120170.0,
+      "market_cap": 118190.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-04-12",
       "metrics": {
-        "stars": 47926,
-        "forks": 5206,
-        "commits_week": 28,
-        "issue_response_hrs": 74.7,
-        "contributors": 36
+        "stars": 51966,
+        "forks": 5563,
+        "commits_week": 0,
+        "issue_response_hrs": 259.8,
+        "contributors": 49
       },
       "tags": [
         "ipo-new"
@@ -335,18 +335,18 @@
     },
     "caveman": {
       "full_name": "JuliusBrussee/caveman",
-      "price": 247.13,
-      "prev_price": 239.83,
-      "change_pct": 3.04,
+      "price": 239.72,
+      "prev_price": 247.13,
+      "change_pct": -3.0,
       "volume_24h": 0,
-      "market_cap": 123565.0,
+      "market_cap": 119860.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-04-14",
       "metrics": {
-        "stars": 60132,
-        "forks": 3330,
-        "commits_week": 20,
-        "issue_response_hrs": 173.7,
+        "stars": 63828,
+        "forks": 3584,
+        "commits_week": 0,
+        "issue_response_hrs": 168.0,
         "contributors": 27
       },
       "tags": [
@@ -355,18 +355,18 @@
     },
     "clawcode": {
       "full_name": "ultraworkers/claw-code",
-      "price": 572.05,
-      "prev_price": 636.26,
-      "change_pct": -10.09,
+      "price": 520.63,
+      "prev_price": 572.05,
+      "change_pct": -8.99,
       "volume_24h": 0,
-      "market_cap": 286025.0,
+      "market_cap": 260315.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-04-27",
       "metrics": {
-        "stars": 191436,
-        "forks": 109886,
-        "commits_week": 98,
-        "issue_response_hrs": 714.0,
+        "stars": 192268,
+        "forks": 109962,
+        "commits_week": 0,
+        "issue_response_hrs": 0.5,
         "contributors": 4
       },
       "tags": [
@@ -375,18 +375,18 @@
     },
     "nuwaskill": {
       "full_name": "alchaincyf/nuwa-skill",
-      "price": 178.26,
-      "prev_price": 168.27,
-      "change_pct": 5.94,
+      "price": 172.83,
+      "prev_price": 178.26,
+      "change_pct": -3.05,
       "volume_24h": 0,
-      "market_cap": 89130.0,
+      "market_cap": 86415.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-05-01",
       "metrics": {
-        "stars": 19157,
-        "forks": 2982,
+        "stars": 20850,
+        "forks": 3185,
         "commits_week": 0,
-        "issue_response_hrs": 161.2,
+        "issue_response_hrs": 320.5,
         "contributors": 1
       },
       "tags": [
@@ -395,19 +395,19 @@
     },
     "opendesign": {
       "full_name": "nexu-io/open-design",
-      "price": 417.08,
-      "prev_price": 437.17,
-      "change_pct": -4.6,
+      "price": 287.31,
+      "prev_price": 417.08,
+      "change_pct": -31.11,
       "volume_24h": 0,
-      "market_cap": 208540.0,
+      "market_cap": 143655.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-05-03",
       "metrics": {
-        "stars": 40255,
-        "forks": 4609,
-        "commits_week": 210,
-        "issue_response_hrs": 72.3,
-        "contributors": 191
+        "stars": 50079,
+        "forks": 5689,
+        "commits_week": 0,
+        "issue_response_hrs": 168.0,
+        "contributors": 233
       },
       "tags": [
         "ipo-new"
@@ -415,18 +415,18 @@
     },
     "gbrain": {
       "full_name": "garrytan/gbrain",
-      "price": 183.98,
-      "prev_price": 190.39,
-      "change_pct": -3.37,
+      "price": 174.7,
+      "prev_price": 183.98,
+      "change_pct": -5.04,
       "volume_24h": 0,
-      "market_cap": 91990.0,
+      "market_cap": 87350.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-05-04",
       "metrics": {
-        "stars": 15612,
-        "forks": 2090,
-        "commits_week": 22,
-        "issue_response_hrs": 67.8,
+        "stars": 18261,
+        "forks": 2548,
+        "commits_week": 0,
+        "issue_response_hrs": 168.0,
         "contributors": 4
       },
       "tags": [
@@ -435,18 +435,18 @@
     },
     "awesomegptimage2apiandprompts": {
       "full_name": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
-      "price": 162.35,
-      "prev_price": 173.39,
-      "change_pct": -6.37,
+      "price": 171.03,
+      "prev_price": 162.35,
+      "change_pct": 5.35,
       "volume_24h": 0,
-      "market_cap": 81175.0,
+      "market_cap": 85515.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-05-04",
       "metrics": {
-        "stars": 14287,
-        "forks": 1414,
-        "commits_week": 7,
-        "issue_response_hrs": 271.8,
+        "stars": 15355,
+        "forks": 1552,
+        "commits_week": 0,
+        "issue_response_hrs": 286.4,
         "contributors": 1
       },
       "tags": [
@@ -455,18 +455,18 @@
     },
     "huashudesign": {
       "full_name": "alchaincyf/huashu-design",
-      "price": 167.02,
-      "prev_price": 166.14,
-      "change_pct": 0.53,
+      "price": 169.49,
+      "prev_price": 167.02,
+      "change_pct": 1.48,
       "volume_24h": 0,
-      "market_cap": 83510.0,
+      "market_cap": 84745.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-05-05",
       "metrics": {
-        "stars": 13701,
-        "forks": 1896,
-        "commits_week": 3,
-        "issue_response_hrs": 161.1,
+        "stars": 14694,
+        "forks": 1987,
+        "commits_week": 0,
+        "issue_response_hrs": 200.9,
         "contributors": 1
       },
       "tags": [
@@ -475,16 +475,16 @@
     },
     "openmythos": {
       "full_name": "kyegomez/OpenMythos",
-      "price": 168.79,
-      "prev_price": 171.54,
-      "change_pct": -1.6,
+      "price": 167.74,
+      "prev_price": 168.79,
+      "change_pct": -0.62,
       "volume_24h": 0,
-      "market_cap": 84395.0,
+      "market_cap": 83870.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-05-05",
       "metrics": {
-        "stars": 12843,
-        "forks": 2932,
+        "stars": 13305,
+        "forks": 3030,
         "commits_week": 0,
         "issue_response_hrs": 36.4,
         "contributors": 1
@@ -495,19 +495,19 @@
     },
     "designmd": {
       "full_name": "google-labs-code/design.md",
-      "price": 168.93,
-      "prev_price": 169.1,
-      "change_pct": -0.1,
+      "price": 178.82,
+      "prev_price": 168.93,
+      "change_pct": 5.85,
       "volume_24h": 0,
-      "market_cap": 84465.0,
+      "market_cap": 89410.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-05-05",
       "metrics": {
-        "stars": 13651,
-        "forks": 1270,
-        "commits_week": 1,
-        "issue_response_hrs": 209.2,
-        "contributors": 14
+        "stars": 14595,
+        "forks": 1378,
+        "commits_week": 0,
+        "issue_response_hrs": 156.9,
+        "contributors": 13
       },
       "tags": [
         "ipo-new"
@@ -515,19 +515,19 @@
     },
     "browserharness": {
       "full_name": "browser-use/browser-harness",
-      "price": 191.54,
-      "prev_price": 181.94,
-      "change_pct": 5.28,
+      "price": 181.45,
+      "prev_price": 191.54,
+      "change_pct": -5.27,
       "volume_24h": 0,
-      "market_cap": 95770.0,
+      "market_cap": 90725.0,
       "shares_outstanding": 500,
       "ipo_date": "2026-05-13",
       "metrics": {
-        "stars": 12625,
-        "forks": 1155,
-        "commits_week": 3,
-        "issue_response_hrs": 55.8,
-        "contributors": 54
+        "stars": 13516,
+        "forks": 1247,
+        "commits_week": 0,
+        "issue_response_hrs": 90.5,
+        "contributors": 59
       },
       "tags": [
         "ipo-new"
