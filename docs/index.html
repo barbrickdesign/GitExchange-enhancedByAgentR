@@ -3,617 +3,521 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitExchange — The GitHub Stock Market</title>
-  <meta property="og:title" content="GitExchange — The GitHub Stock Market">
-  <meta property="og:description" content="Trade open-source repos like stocks. Prices driven by real GitHub activity. Built entirely on GitHub Actions.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://solanaleaky.github.io/GitExchange/">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="GitExchange — The GitHub Stock Market">
-  <meta name="twitter:description" content="Trade open-source repos like stocks. Prices driven by real GitHub activity.">
+  <title>GitExchange Pro Terminal</title>
+  <meta name="description" content="Pro trading terminal for open-source repo markets with Solana settlement support.">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
   <style>
     :root {
-      --bg: #0d1117;
-      --surface: #161b22;
-      --border: #30363d;
-      --fg: #c9d1d9;
-      --fg-muted: #8b949e;
-      --green: #3fb950;
-      --red: #f85149;
-      --blue: #58a6ff;
-      --accent: #1f6feb;
-      --gold: #f9c513;
-      --silver: #8b949e;
-      --bronze: #da7b3a;
+      --bg: #06090f;
+      --surface: #0f1521;
+      --panel: #141c2a;
+      --border: #243149;
+      --text: #e6edf3;
+      --muted: #8ba0bb;
+      --green: #22c55e;
+      --red: #ef4444;
+      --accent: #8b5cf6;
+      --accent-2: #14b8a6;
+      --gold: #f6c453;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
+    * { box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 20% -10%, #2a1242 0%, var(--bg) 45%), var(--bg);
+      color: var(--text);
     }
 
-    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-
-    header {
-      text-align: center;
-      padding: 48px 20px 0;
-      position: relative;
+    .container { max-width: 1320px; margin: 0 auto; padding: 18px; }
+    .glass {
+      background: linear-gradient(180deg, rgba(20, 28, 42, 0.95), rgba(15, 21, 33, 0.95));
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
     }
 
-    header::after {
-      content: '';
-      display: block;
-      margin-top: 32px;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--accent), var(--blue), var(--accent), transparent);
-      border-radius: 2px;
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 8px;
-      letter-spacing: -0.5px;
-    }
-
-    header p { color: var(--fg-muted); font-size: 1.1em; }
-
-    .stats-bar {
+    .topbar {
+      padding: 14px 18px;
       display: flex;
-      justify-content: center;
-      gap: 56px;
-      margin-top: 28px;
-      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
     }
 
-    .stat {
-      text-align: center;
-      padding: 8px 0;
-    }
+    .brand h1 { margin: 0; font-size: 1.45rem; letter-spacing: 0.4px; }
+    .brand p { margin: 4px 0 0; color: var(--muted); font-size: 0.85rem; }
 
-    .stat-value {
-      font-size: 1.8em;
-      font-weight: bold;
-      color: var(--blue);
-    }
-
-    .stat-label {
-      font-size: 0.8em;
-      color: var(--fg-muted);
+    .status { display: flex; align-items: center; gap: 12px; }
+    .chip {
+      background: rgba(34, 197, 94, 0.1);
+      color: #86efac;
+      border: 1px solid rgba(34, 197, 94, 0.35);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      padding: 6px 10px;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-top: 2px;
+      letter-spacing: 0.6px;
     }
 
-    h2 {
-      margin: 40px 0 20px;
-      padding-bottom: 8px;
+    .chip.closed {
+      background: rgba(239, 68, 68, 0.12);
+      color: #fca5a5;
+      border-color: rgba(239, 68, 68, 0.4);
+    }
+
+    .muted { color: var(--muted); font-size: 0.82rem; }
+
+    .ticker-tape {
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 10px 0;
+      margin-bottom: 14px;
+      border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
 
-    /* --- Stock Cards --- */
-    .stock-grid {
+    .ticker-inner {
+      display: inline-block;
+      min-width: 100%;
+      animation: scroll 30s linear infinite;
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .ticker-item { margin-right: 24px; font-size: 0.9rem; }
+    .up { color: var(--green); }
+    .down { color: var(--red); }
+
+    .metrics-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 16px;
-      margin-bottom: 40px;
-    }
-
-    .stock-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 20px;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-    }
-
-    .stock-card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 0 16px rgba(31, 111, 235, 0.25), 0 0 4px rgba(31, 111, 235, 0.15);
-      transform: scale(1.015);
-    }
-
-    .stock-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
       margin-bottom: 14px;
     }
 
-    .stock-ticker {
-      font-size: 1.3em;
-      font-weight: bold;
-    }
+    .metric { padding: 14px; }
+    .metric .label { color: var(--muted); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 1px; }
+    .metric .value { font-size: 1.35rem; font-weight: 700; margin-top: 6px; }
 
-    .stock-name {
-      font-size: 0.85em;
-      color: var(--fg-muted);
-    }
-
-    .stock-price {
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-
-    .stock-change {
-      font-size: 0.9em;
-      font-weight: 600;
-    }
-
-    .positive { color: var(--green); }
-    .negative { color: var(--red); }
-
-    .stock-metrics {
+    .layout {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin: 14px 0;
-      font-size: 0.85em;
+      grid-template-columns: 2fr 1fr;
+      gap: 12px;
     }
 
-    .metric-item {
-      text-align: center;
-      padding: 8px 6px;
-      background: var(--bg);
-      border-radius: 6px;
-      border: 1px solid transparent;
-      transition: border-color 0.2s ease;
-    }
+    .panel { padding: 14px; }
+    .panel h2 { margin: 0 0 10px; font-size: 1rem; }
 
-    .stock-card:hover .metric-item {
-      border-color: var(--border);
-    }
-
-    .metric-value { font-weight: bold; }
-    .metric-label { color: var(--fg-muted); font-size: 0.8em; }
-
-    .stock-actions {
-      display: flex;
-      gap: 8px;
-      margin-top: 14px;
-    }
-
-    .btn {
-      flex: 1;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 6px;
-      font-size: 0.9em;
-      font-weight: 600;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      color: #fff;
-      transition: opacity 0.2s;
-    }
-
-    .btn:hover { opacity: 0.85; }
-    .btn-buy { background: var(--green); }
-    .btn-sell { background: var(--red); }
-    .btn-short { background: var(--fg-muted); }
-
-    /* --- Chart --- */
-    .chart-container {
-      background: var(--surface);
+    .controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    select {
+      background: #0d1420;
+      color: var(--text);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 20px;
+      padding: 7px 9px;
+      font-size: 0.85rem;
     }
 
-    /* --- Portfolio CTA --- */
-    .portfolio-cta {
-      display: flex;
-      justify-content: center;
-      margin: 40px 0;
-    }
-
-    .btn-portfolio {
-      display: inline-flex;
-      align-items: center;
+    .stock-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 10px;
-      padding: 14px 36px;
-      background: linear-gradient(135deg, var(--accent), #388bfd);
-      color: #fff;
-      font-size: 1.1em;
-      font-weight: 700;
-      border: none;
-      border-radius: 10px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      letter-spacing: 0.3px;
-    }
-
-    .btn-portfolio:hover {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 6px 24px rgba(31, 111, 235, 0.4);
-    }
-
-    .btn-portfolio svg {
-      width: 20px;
-      height: 20px;
-      fill: currentColor;
-    }
-
-    /* --- Leaderboard --- */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-    }
-
-    th, td {
-      padding: 10px 12px;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-
-    th {
-      color: var(--fg-muted);
-      font-weight: 600;
-      font-size: 0.85em;
-      text-transform: uppercase;
-    }
-
-    tr:hover { background: var(--surface); }
-
-    #leaderboard-table tr.rank-1 {
-      border-left: 3px solid var(--gold);
-      background: rgba(249, 197, 19, 0.04);
-    }
-
-    #leaderboard-table tr.rank-2 {
-      border-left: 3px solid var(--silver);
-      background: rgba(139, 148, 158, 0.04);
-    }
-
-    #leaderboard-table tr.rank-3 {
-      border-left: 3px solid var(--bronze);
-      background: rgba(218, 123, 58, 0.04);
-    }
-
-    .loading {
-      text-align: center;
-      padding: 60px;
-      color: var(--fg-muted);
-    }
-
-    /* --- Footer --- */
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      color: var(--fg-muted);
-      font-size: 0.85em;
-      border-top: 1px solid var(--border);
-      margin-top: 60px;
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
       margin-top: 12px;
     }
 
-    .footer-links a {
-      color: var(--blue);
+    .stock-card { padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: rgba(11,16,25,0.75); }
+    .row { display: flex; justify-content: space-between; align-items: center; }
+    .ticker { font-size: 1.05rem; font-weight: 700; }
+    .name { color: var(--muted); font-size: 0.78rem; margin-top: 2px; }
+    .price { font-size: 1.1rem; font-weight: 700; }
+
+    .micro {
+      margin-top: 8px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    .micro b { color: var(--text); display: block; font-size: 0.8rem; }
+
+    .btns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 10px; }
+    .btn {
+      padding: 7px 8px;
+      border-radius: 8px;
+      color: white;
       text-decoration: none;
-      transition: color 0.2s ease;
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .buy { background: #16a34a; }
+    .sell { background: #dc2626; }
+    .short { background: #475569; }
+
+    table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+    th, td { padding: 8px 6px; border-bottom: 1px solid var(--border); text-align: left; }
+    th { color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.8px; }
+
+    .rank-1 { border-left: 2px solid var(--gold); }
+
+    .footer-note {
+      margin-top: 12px;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      background: rgba(20, 184, 166, 0.08);
     }
 
-    .footer-links a:hover {
-      color: #79c0ff;
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.8em; }
-      .stats-bar { gap: 24px; }
-      .stock-grid { grid-template-columns: 1fr; }
-      .btn-portfolio { padding: 12px 24px; font-size: 1em; }
+    @media (max-width: 1024px) {
+      .layout { grid-template-columns: 1fr; }
+      .metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>GitExchange</h1>
-    <p>The GitHub Stock Market — trade open-source repos like stocks</p>
-    <div class="stats-bar">
-      <div class="stat">
-        <div class="stat-value" id="total-cap">--</div>
-        <div class="stat-label">Market Cap</div>
-      </div>
-      <div class="stat">
-        <div class="stat-value" id="stock-count">--</div>
-        <div class="stat-label">Stocks</div>
-      </div>
-      <div class="stat">
-        <div class="stat-value" id="trader-count">--</div>
-        <div class="stat-label">Traders</div>
-      </div>
-      <div class="stat">
-        <div class="stat-value" id="market-status">--</div>
-        <div class="stat-label">Status</div>
-      </div>
-    </div>
-  </header>
-
   <div class="container">
-    <div class="portfolio-cta">
-      <a class="btn-portfolio" href="https://github.com/SolanaLeeky/GitExchange/issues/new?title=PORTFOLIO">
-        <svg viewBox="0 0 16 16"><path d="M1.5 1.75V13.5h13.05a.75.75 0 010 1.5H.75a.75.75 0 01-.75-.75V1.75a.75.75 0 011.5 0zm14.28 2.53a.75.75 0 00-1.06-1.06L10 7.94 7.53 5.47a.75.75 0 00-1.06 0L3.22 8.72a.75.75 0 001.06 1.06L7 7.06l2.47 2.47a.75.75 0 001.06 0l5.25-5.25z"/></svg>
-        View Your Portfolio
-      </a>
+    <div class="topbar glass">
+      <div class="brand">
+        <h1>GitExchange Pro</h1>
+        <p>Pump-style market terminal for open-source assets + Solana settlement rail</p>
+      </div>
+      <div class="status">
+        <span id="market-chip" class="chip">Loading</span>
+        <span class="muted" id="clock">--</span>
+      </div>
     </div>
 
-    <h2>Stocks</h2>
-    <div id="stock-grid" class="stock-grid">
-      <div class="loading">Loading market data...</div>
+    <div class="ticker-tape glass"><div id="ticker" class="ticker-inner"></div></div>
+
+    <div class="metrics-grid">
+      <div class="metric glass"><div class="label">Total Market Cap</div><div class="value" id="cap">--</div></div>
+      <div class="metric glass"><div class="label">Listed Projects</div><div class="value" id="stocks">--</div></div>
+      <div class="metric glass"><div class="label">Traders</div><div class="value" id="traders">--</div></div>
+      <div class="metric glass"><div class="label">Last Update</div><div class="value" id="updated" style="font-size:1rem">--</div></div>
     </div>
 
-    <h2>Price History</h2>
-    <div class="chart-container" style="position:relative;height:320px;">
-      <canvas id="price-chart"></canvas>
-    </div>
+    <div class="layout">
+      <div>
+        <section class="panel glass">
+          <h2>Trading Chart</h2>
+          <div class="controls">
+            <select id="chart-stock"></select>
+            <select id="chart-window">
+              <option value="1">24H</option>
+              <option value="7" selected>7D</option>
+              <option value="30">30D</option>
+            </select>
+            <select id="chart-indicator">
+              <option value="none" selected>No Indicator</option>
+              <option value="sma">SMA (6)</option>
+              <option value="ema">EMA (6)</option>
+            </select>
+          </div>
+          <div style="position:relative;height:320px"><canvas id="chart"></canvas></div>
+        </section>
 
-    <h2>Leaderboard</h2>
-    <div id="leaderboard-table">
-      <div class="loading">Loading leaderboard...</div>
-    </div>
+        <section class="panel glass" style="margin-top:12px">
+          <h2>Market Board</h2>
+          <div id="cards" class="stock-grid"></div>
+        </section>
+      </div>
 
-    <h2>Recent Trades</h2>
-    <div id="trades-table">
-      <div class="loading">Loading trades...</div>
+      <div>
+        <section class="panel glass">
+          <h2>Leaderboard</h2>
+          <div id="leaderboard"></div>
+        </section>
+        <section class="panel glass" style="margin-top:12px">
+          <h2>Recent Trades</h2>
+          <div id="trades"></div>
+        </section>
+        <section class="panel glass" style="margin-top:12px">
+          <h2>Solana Settlement</h2>
+          <div id="solana" class="footer-note">Loading Solana config...</div>
+        </section>
+      </div>
     </div>
-
-    <h2>How to Trade</h2>
-    <table>
-      <tr><th>Action</th><th>Issue Title Format</th><th>Example</th></tr>
-      <tr><td>Buy</td><td><code>BUY &lt;ticker&gt; &lt;quantity&gt;</code></td><td><code>BUY react 10</code></td></tr>
-      <tr><td>Sell</td><td><code>SELL &lt;ticker&gt; &lt;quantity&gt;</code></td><td><code>SELL vscode 5</code></td></tr>
-      <tr><td>Short</td><td><code>SHORT &lt;ticker&gt; &lt;quantity&gt;</code></td><td><code>SHORT deno 20</code></td></tr>
-      <tr><td>Cover</td><td><code>COVER &lt;ticker&gt; &lt;quantity&gt;</code></td><td><code>COVER deno 20</code></td></tr>
-      <tr><td>Portfolio</td><td><code>PORTFOLIO</code></td><td><code>PORTFOLIO</code></td></tr>
-    </table>
   </div>
 
-  <footer>
-    <p>Powered by GitHub Actions</p>
-    <p>Prices update every 6 hours based on real GitHub API metrics</p>
-    <div class="footer-links">
-      <a href="https://github.com/SolanaLeeky/GitExchange">Repository</a>
-      <a href="https://github.com/SolanaLeeky/GitExchange/issues">Trade (Issues)</a>
-      <a href="https://github.com/SolanaLeeky/GitExchange/issues/new?title=PORTFOLIO">Your Portfolio</a>
-    </div>
-  </footer>
-
   <script>
-    const REPO = 'SolanaLeeky/GitExchange';
+    const REPO = 'barbrickdesign/GitExchange-enhancedByAgentR';
     const RAW = `https://raw.githubusercontent.com/${REPO}/main`;
+
+    let state = { market: null, dashboard: null, config: null };
+    let chart;
+
+    function fmtMoney(n) {
+      if (!Number.isFinite(Number(n))) return '$0.00';
+      const v = Number(n);
+      if (v >= 1e9) return `$${(v / 1e9).toFixed(2)}B`;
+      if (v >= 1e6) return `$${(v / 1e6).toFixed(2)}M`;
+      if (v >= 1e3) return `$${(v / 1e3).toFixed(1)}K`;
+      return `$${v.toFixed(2)}`;
+    }
 
     async function loadJSON(path) {
       try {
-        const res = await fetch(`${RAW}/${path}`);
+        const res = await fetch(`${RAW}/${path}?t=${Date.now()}`);
         if (!res.ok) return null;
         return await res.json();
-      } catch { return null; }
-    }
-
-    function formatCurrency(n) {
-      if (n >= 1e6) return `$${(n/1e6).toFixed(2)}M`;
-      if (n >= 1e3) return `$${(n/1e3).toFixed(1)}K`;
-      return `$${n.toFixed(2)}`;
-    }
-
-    async function renderStocks() {
-      const market = await loadJSON('data/market.json');
-      if (!market) { document.getElementById('stock-grid').innerHTML = '<p>Could not load market data.</p>'; return; }
-
-      // Stats bar
-      const stocks = market.stocks || {};
-      const active = Object.entries(stocks).filter(([,s]) => s.market_status !== 'DELISTED');
-      document.getElementById('total-cap').textContent = formatCurrency(market.total_market_cap || 0);
-      document.getElementById('stock-count').textContent = active.length;
-      document.getElementById('market-status').textContent = (market.market_status || 'unknown').toUpperCase();
-
-      // Stock cards
-      const grid = document.getElementById('stock-grid');
-      grid.innerHTML = '';
-
-      const sorted = active.sort((a, b) => (b[1].market_cap || 0) - (a[1].market_cap || 0));
-
-      for (const [ticker, s] of sorted) {
-        const change = s.change_pct || 0;
-        const changeClass = change >= 0 ? 'positive' : 'negative';
-        const changeStr = change >= 0 ? `+${change.toFixed(2)}%` : `${change.toFixed(2)}%`;
-        const m = s.metrics || {};
-
-        const card = document.createElement('div');
-        card.className = 'stock-card';
-        card.innerHTML = `
-          <div class="stock-header">
-            <div>
-              <div class="stock-ticker">${ticker.toUpperCase()}</div>
-              <div class="stock-name">${s.full_name || ticker}</div>
-            </div>
-            <div style="text-align:right">
-              <div class="stock-price">$${s.price.toLocaleString(undefined, {minimumFractionDigits:2})}</div>
-              <div class="stock-change ${changeClass}">${changeStr}</div>
-            </div>
-          </div>
-          <div class="stock-metrics">
-            <div class="metric-item"><div class="metric-value">${(m.stars||0).toLocaleString()}</div><div class="metric-label">Stars</div></div>
-            <div class="metric-item"><div class="metric-value">${(m.forks||0).toLocaleString()}</div><div class="metric-label">Forks</div></div>
-            <div class="metric-item"><div class="metric-value">${(m.contributors||0).toLocaleString()}</div><div class="metric-label">Contributors</div></div>
-          </div>
-          <div class="stock-actions">
-            <a class="btn btn-buy" href="https://github.com/${REPO}/issues/new?title=BUY+${ticker}+10&body=Adjust+quantity+then+submit">Buy</a>
-            <a class="btn btn-sell" href="https://github.com/${REPO}/issues/new?title=SELL+${ticker}+5&body=Adjust+quantity+then+submit">Sell</a>
-            <a class="btn btn-short" href="https://github.com/${REPO}/issues/new?title=SHORT+${ticker}+10&body=Adjust+quantity+then+submit">Short</a>
-          </div>
-        `;
-        grid.appendChild(card);
+      } catch {
+        return null;
       }
-
-      // Price chart — load real history
-      renderPriceChart(sorted);
     }
 
-    async function renderPriceChart(stocks) {
-      const ctx = document.getElementById('price-chart').getContext('2d');
-      const colors = ['#58a6ff', '#3fb950', '#f85149', '#d2a8ff', '#f0883e', '#79c0ff', '#56d364', '#ffa657', '#ff7b72', '#d2a8ff'];
+    function renderHeader() {
+      const market = state.market;
+      if (!market) return;
+      const stocks = Object.values(market.stocks || {}).filter(s => s.market_status !== 'DELISTED');
+      const status = (market.market_status || 'unknown').toUpperCase();
+      const chip = document.getElementById('market-chip');
+      chip.textContent = status;
+      chip.className = `chip ${status === 'OPEN' ? '' : 'closed'}`;
+      document.getElementById('cap').textContent = fmtMoney(market.total_market_cap || 0);
+      document.getElementById('stocks').textContent = stocks.length;
+      document.getElementById('updated').textContent = (market.last_updated || '--').replace('T', ' ').slice(0, 16);
+      document.getElementById('traders').textContent = (state.dashboard?.trader_count ?? '--');
+    }
 
-      // Load last 7 days of price history — use ALL snapshots (not just 1 per day)
-      const allPrices = {};
-      const labels = [];
+    function renderTickerTape() {
+      const market = state.market;
+      const el = document.getElementById('ticker');
+      if (!market?.stocks) { el.textContent = 'Market data unavailable'; return; }
+      const rows = Object.entries(market.stocks)
+        .filter(([,s]) => s.market_status !== 'DELISTED')
+        .sort((a,b) => (b[1].market_cap||0) - (a[1].market_cap||0))
+        .slice(0, 18);
+      const unit = rows.map(([t,s]) => {
+        const c = Number(s.change_pct || 0);
+        const cls = c >= 0 ? 'up' : 'down';
+        const sign = c >= 0 ? '+' : '';
+        return `<span class="ticker-item"><b>${t.toUpperCase()}</b> ${fmtMoney(s.price || 0)} <span class="${cls}">${sign}${c.toFixed(2)}%</span></span>`;
+      }).join('');
+      el.innerHTML = unit + unit;
+    }
+
+    function renderCards() {
+      const market = state.market;
+      const wrap = document.getElementById('cards');
+      if (!market?.stocks) { wrap.innerHTML = '<p class="muted">No market data.</p>'; return; }
+      const active = Object.entries(market.stocks)
+        .filter(([,s]) => s.market_status !== 'DELISTED')
+        .sort((a,b) => (b[1].market_cap||0) - (a[1].market_cap||0));
+
+      wrap.innerHTML = active.map(([ticker, s]) => {
+        const m = s.metrics || {};
+        const change = Number(s.change_pct || 0);
+        const cls = change >= 0 ? 'up' : 'down';
+        const sign = change >= 0 ? '+' : '';
+        return `
+          <article class="stock-card">
+            <div class="row">
+              <div><div class="ticker">${ticker.toUpperCase()}</div><div class="name">${s.full_name || ticker}</div></div>
+              <div style="text-align:right"><div class="price">${fmtMoney(s.price || 0)}</div><div class="${cls}">${sign}${change.toFixed(2)}%</div></div>
+            </div>
+            <div class="micro">
+              <div><b>${(m.stars || 0).toLocaleString()}</b>Stars</div>
+              <div><b>${(m.commits_week || 0).toLocaleString()}</b>Commits/W</div>
+              <div><b>${fmtMoney(s.market_cap || 0)}</b>Cap</div>
+            </div>
+            <div class="btns">
+              <a class="btn buy" href="https://github.com/${REPO}/issues/new?title=BUY+${ticker}+10&body=wallet:+\nsignature:+">BUY</a>
+              <a class="btn sell" href="https://github.com/${REPO}/issues/new?title=SELL+${ticker}+5">SELL</a>
+              <a class="btn short" href="https://github.com/${REPO}/issues/new?title=SHORT+${ticker}+10">SHORT</a>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function renderLeaderboard() {
+      const data = state.dashboard?.leaderboard || [];
+      const el = document.getElementById('leaderboard');
+      if (!data.length) { el.innerHTML = '<p class="muted">No traders yet.</p>'; return; }
+      let html = '<table><tr><th>Rank</th><th>Trader</th><th>Value</th><th>P&L</th></tr>';
+      data.slice(0, 10).forEach((t, i) => {
+        const pnlUp = Number(t.pnl || 0) >= 0;
+        const cls = pnlUp ? 'up' : 'down';
+        html += `<tr class="${i === 0 ? 'rank-1' : ''}"><td>${i + 1}</td><td>@${t.username}</td><td>${fmtMoney(t.total_value || 0)}</td><td class="${cls}">${pnlUp ? '+' : ''}${Number(t.pnl_pct || 0).toFixed(1)}%</td></tr>`;
+      });
+      html += '</table>';
+      el.innerHTML = html;
+    }
+
+    async function renderTrades() {
+      const el = document.getElementById('trades');
       const today = new Date();
-      for (let i = 6; i >= 0; i--) {
+      let all = [];
+      for (let i = 0; i < 5; i++) {
         const d = new Date(today);
-        d.setDate(d.getDate() - i);
+        d.setDate(today.getDate() - i);
+        const dateStr = d.toISOString().slice(0, 10);
+        const data = await loadJSON(`data/history/trades/${dateStr}.json`);
+        if (data?.trades) all = all.concat(data.trades);
+      }
+      if (!all.length) { el.innerHTML = '<p class="muted">No recent trades.</p>'; return; }
+      all.sort((a,b) => (b.timestamp || '').localeCompare(a.timestamp || ''));
+      let html = '<table><tr><th>Time</th><th>Action</th><th>Ticker</th><th>Qty</th></tr>';
+      all.slice(0, 12).forEach(t => {
+        const cls = (t.action === 'BUY' || t.action === 'COVER') ? 'up' : 'down';
+        html += `<tr><td>${(t.timestamp || '').replace('T',' ').slice(5,16)}</td><td class="${cls}">${t.action || ''}</td><td>${(t.ticker || '').toUpperCase()}</td><td>${t.qty || 0}</td></tr>`;
+      });
+      html += '</table>';
+      el.innerHTML = html;
+    }
+
+    function renderSolana() {
+      const cfg = state.config?.solana;
+      const el = document.getElementById('solana');
+      if (!cfg) { el.textContent = 'Solana config not found.'; return; }
+      el.innerHTML = `
+        RPC: <b>${cfg.rpc_url || 'n/a'}</b><br>
+        Mode: <b>${cfg.require_payment_for_buy ? 'Required for BUY' : 'Optional proof'}</b><br>
+        Treasury: <code>${cfg.treasury_wallet || 'set in data/config.json'}</code><br>
+        <span class="muted">Attach wallet + signature in BUY issue body for on-chain verification.</span>
+      `;
+    }
+
+    function updateClock() {
+      document.getElementById('clock').textContent = `UTC ${new Date().toISOString().replace('T', ' ').slice(0, 19)}`;
+    }
+
+    function calcSMA(values, period) {
+      const out = [];
+      for (let i = 0; i < values.length; i++) {
+        if (i < period - 1 || values[i] == null) { out.push(null); continue; }
+        const chunk = values.slice(i - period + 1, i + 1).filter(v => v != null);
+        out.push(chunk.length ? chunk.reduce((a,b) => a + b, 0) / chunk.length : null);
+      }
+      return out;
+    }
+
+    function calcEMA(values, period) {
+      const out = [];
+      const k = 2 / (period + 1);
+      let prev = null;
+      values.forEach(v => {
+        if (v == null) { out.push(null); return; }
+        prev = prev == null ? v : (v * k + prev * (1 - k));
+        out.push(prev);
+      });
+      return out;
+    }
+
+    async function chartSeries(ticker, days) {
+      const labels = [];
+      const values = [];
+      const now = new Date();
+      for (let i = days - 1; i >= 0; i--) {
+        const d = new Date(now);
+        d.setDate(now.getDate() - i);
         const dateStr = d.toISOString().slice(0, 10);
         const data = await loadJSON(`data/history/prices/${dateStr}.json`);
-        if (data && data.snapshots) {
-          for (const snap of data.snapshots) {
-            const timeLabel = dateStr.slice(5) + ' ' + (snap.time || '').slice(0, 5);
-            labels.push(timeLabel);
-            for (const [ticker, price] of Object.entries(snap.prices || {})) {
-              if (!allPrices[ticker]) allPrices[ticker] = new Array(labels.length - 1).fill(null);
-              allPrices[ticker].push(price);
-            }
-            // Fill null for tickers not in this snapshot
-            for (const ticker in allPrices) {
-              if (allPrices[ticker].length < labels.length) {
-                allPrices[ticker].push(null);
-              }
-            }
-          }
+        if (!data?.snapshots) continue;
+        for (const snap of data.snapshots) {
+          labels.push(`${dateStr.slice(5)} ${(snap.time || '').slice(0,5)}`);
+          values.push(Number((snap.prices || {})[ticker] ?? null));
         }
       }
+      return { labels, values };
+    }
 
-      // Build datasets — show top 5 stocks by market cap
-      const top5 = stocks.slice(0, 5);
-      const datasets = top5.map(([ticker], i) => {
-        const color = colors[i % colors.length];
-        // Parse hex to RGB for alpha fill
-        const r = parseInt(color.slice(1,3), 16);
-        const g = parseInt(color.slice(3,5), 16);
-        const b = parseInt(color.slice(5,7), 16);
-        return {
-          label: ticker.toUpperCase(),
-          data: allPrices[ticker] || [],
-          borderColor: color,
-          backgroundColor: `rgba(${r}, ${g}, ${b}, 0.08)`,
-          fill: true,
-          tension: 0.3,
-          borderWidth: 2,
-          pointRadius: 3,
+    async function renderChart() {
+      const ticker = document.getElementById('chart-stock').value;
+      if (!ticker) return;
+      const days = Number(document.getElementById('chart-window').value || 7);
+      const indicator = document.getElementById('chart-indicator').value;
+      const { labels, values } = await chartSeries(ticker, days);
+
+      const datasets = [{
+        label: `${ticker.toUpperCase()} Price`,
+        data: values,
+        borderColor: '#8b5cf6',
+        backgroundColor: 'rgba(139, 92, 246, 0.12)',
+        borderWidth: 2,
+        pointRadius: 1,
+        tension: 0.22,
+        fill: true,
+        spanGaps: true,
+      }];
+
+      if (indicator !== 'none') {
+        const calc = indicator === 'sma' ? calcSMA(values, 6) : calcEMA(values, 6);
+        datasets.push({
+          label: indicator.toUpperCase(),
+          data: calc,
+          borderColor: '#14b8a6',
+          borderWidth: 1.5,
+          pointRadius: 0,
+          tension: 0.2,
           spanGaps: true,
-        };
-      });
+        });
+      }
 
-      new Chart(ctx, {
+      if (chart) chart.destroy();
+      chart = new Chart(document.getElementById('chart').getContext('2d'), {
         type: 'line',
         data: { labels, datasets },
         options: {
           responsive: true,
           maintainAspectRatio: false,
-          plugins: {
-            legend: { labels: { color: '#c9d1d9' } },
-          },
+          plugins: { legend: { labels: { color: '#e6edf3' } } },
           scales: {
-            x: { ticks: { color: '#8b949e', maxTicksLimit: 8 }, grid: { color: '#21262d' } },
-            y: { ticks: { color: '#8b949e', callback: v => '$' + v }, grid: { color: '#21262d' } },
-          },
-        },
+            x: { ticks: { color: '#8ba0bb', maxTicksLimit: 10 }, grid: { color: '#243149' } },
+            y: { ticks: { color: '#8ba0bb', callback: v => `$${v}` }, grid: { color: '#243149' } },
+          }
+        }
       });
     }
 
-    async function renderLeaderboard() {
-      const data = await loadJSON('docs/dashboard.json');
-      const container = document.getElementById('leaderboard-table');
-
-      if (!data || !data.leaderboard || data.leaderboard.length === 0) {
-        container.innerHTML = '<p style="color:var(--fg-muted)">No traders yet. Be the first!</p>';
-        return;
-      }
-
-      // Set trader count in stats bar
-      document.getElementById('trader-count').textContent = data.trader_count || 0;
-
-      const badges = {
-        'first-trade': '🎯', '100-trades': '💯', '10x-return': '🚀',
-        'diamond-hands': '💎', 'paper-hands': '📄', 'short-king': '👑',
-        'diversified': '🌐', 'whale': '🐋', 'survivor': '🛡️', 'ipo-hunter': '🔔'
-      };
-      const medals = ['🥇', '🥈', '🥉'];
-
-      let html = '<table><tr><th>Rank</th><th>Trader</th><th>Value</th><th>P&L</th><th>Trades</th><th>Badges</th></tr>';
-      data.leaderboard.forEach((t, i) => {
-        const medal = i < 3 ? medals[i] : (i + 1);
-        const pnlClass = t.pnl >= 0 ? 'positive' : 'negative';
-        const pnlStr = t.pnl >= 0 ? `+$${t.pnl.toLocaleString(undefined,{minimumFractionDigits:2})}` : `-$${Math.abs(t.pnl).toLocaleString(undefined,{minimumFractionDigits:2})}`;
-        const badgeStr = (t.achievements || []).map(a => badges[a] || '').join(' ');
-        const rankClass = i < 3 ? ` class="rank-${i + 1}"` : '';
-        html += `<tr${rankClass}>
-          <td>${medal}</td>
-          <td>@${t.username}</td>
-          <td>$${t.total_value.toLocaleString(undefined,{minimumFractionDigits:2})}</td>
-          <td class="${pnlClass}">${pnlStr} (${t.pnl_pct >= 0 ? '+' : ''}${t.pnl_pct.toFixed(1)}%)</td>
-          <td>${t.trade_count}</td>
-          <td>${badgeStr}</td>
-        </tr>`;
-      });
-      html += '</table>';
-      container.innerHTML = html;
+    function hydrateChartSelectors() {
+      const market = state.market;
+      if (!market?.stocks) return;
+      const select = document.getElementById('chart-stock');
+      const current = select.value;
+      const options = Object.entries(market.stocks)
+        .filter(([,s]) => s.market_status !== 'DELISTED')
+        .sort((a,b) => (b[1].market_cap || 0) - (a[1].market_cap || 0));
+      select.innerHTML = options.map(([ticker]) => `<option value="${ticker}">${ticker.toUpperCase()}</option>`).join('');
+      if (current && options.some(([t]) => t === current)) select.value = current;
+      select.onchange = renderChart;
+      document.getElementById('chart-window').onchange = renderChart;
+      document.getElementById('chart-indicator').onchange = renderChart;
     }
 
-    async function renderTrades() {
-      // Try last 3 days to find trades
-      const container = document.getElementById('trades-table');
-      let allTrades = [];
-      const today = new Date();
-      for (let i = 0; i < 3; i++) {
-        const d = new Date(today);
-        d.setDate(d.getDate() - i);
-        const dateStr = d.toISOString().slice(0, 10);
-        const data = await loadJSON(`data/history/trades/${dateStr}.json`);
-        if (data && data.trades) allTrades = allTrades.concat(data.trades);
-      }
+    async function refreshAll() {
+      const [market, dashboard, config] = await Promise.all([
+        loadJSON('data/market.json'),
+        loadJSON('docs/dashboard.json'),
+        loadJSON('data/config.json'),
+      ]);
+      state.market = market;
+      state.dashboard = dashboard;
+      state.config = config;
 
-      if (allTrades.length === 0) {
-        container.innerHTML = '<p style="color:var(--fg-muted)">No recent trades.</p>';
-        return;
-      }
-
-      allTrades.sort((a, b) => (b.timestamp || '').localeCompare(a.timestamp || ''));
-      const trades = allTrades.slice(0, 20);
-
-      let html = '<table><tr><th>Time</th><th>Trader</th><th>Action</th><th>Stock</th><th>Qty</th><th>Price</th><th>Total</th></tr>';
-      for (const t of trades) {
-        const time = (t.timestamp || '').slice(0, 16).replace('T', ' ');
-        const actionClass = (t.action === 'BUY' || t.action === 'COVER') ? 'positive' : 'negative';
-        html += `<tr>
-          <td>${time}</td>
-          <td>@${t.user}</td>
-          <td class="${actionClass}">${t.action}</td>
-          <td>${(t.ticker||'').toUpperCase()}</td>
-          <td>${t.qty}</td>
-          <td>$${(t.price||0).toLocaleString(undefined,{minimumFractionDigits:2})}</td>
-          <td>$${(t.total||0).toLocaleString(undefined,{minimumFractionDigits:2})}</td>
-        </tr>`;
-      }
-      html += '</table>';
-      container.innerHTML = html;
+      renderHeader();
+      renderTickerTape();
+      renderCards();
+      renderLeaderboard();
+      renderSolana();
+      hydrateChartSelectors();
+      await Promise.all([renderChart(), renderTrades()]);
     }
 
-    renderStocks();
-    renderLeaderboard();
-    renderTrades();
+    updateClock();
+    setInterval(updateClock, 1000);
+    refreshAll();
+    setInterval(refreshAll, 20000);
   </script>
 </body>
 </html>

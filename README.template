@@ -6,7 +6,7 @@
 
 **Trade GitHub repos like stocks. Prices driven by real stars, commits, and forks.**
 
-Every repo is a ticker. Every issue is a trade. No signup, no wallet -- just your GitHub account.
+Every repo is a ticker. Every issue is a trade. GitHub-native execution with optional Solana on-chain settlement.
 
 <!-- MARKET_STATUS -->
 
@@ -30,6 +30,8 @@ Every repo is a ticker. Every issue is a trade. No signup, no wallet -- just you
 | **4** | Open an issue titled `PORTFOLIO` anytime to check your holdings |
 
 > **Requirements** -- Your GitHub account must be at least **7 days old**. Limit: **5 trades per hour**.
+>
+> **On-chain mode (optional)** -- Add `wallet: <solana_wallet>` and `signature: <tx_signature>` in BUY issues to verify payment through Solana RPC.
 
 ---
 
@@ -85,6 +87,29 @@ SHORT <ticker> <qty>     Bet on price drop        SHORT deno 20
 COVER <ticker> <qty>     Close a short            COVER deno 20
 PORTFOLIO                View your holdings
 ```
+
+---
+
+## Solana Settlement (Optional)
+
+GitExchange now supports Solana RPC transaction verification for BUY execution:
+
+- Submit a normal BUY issue title (`BUY <ticker> <qty>`)
+- Add `wallet:` and `signature:` lines in the issue body
+- AgentR verifies a confirmed transfer to the configured treasury wallet before settlement
+
+Configuration lives in `data/config.json` under the `solana` section (`rpc_url`, `treasury_wallet`, `usd_per_sol`, and policy flags).
+
+---
+
+## AgentR Automation
+
+AgentR orchestration and self-healing are built in:
+
+- `engine/agentr_orchestrator.py` runs price updates, market events, rendering, and health checks with retry
+- `engine/self_heal.py` repairs common state drift and validates integrity
+- `.github/workflows/agentr-orchestrator.yml` runs end-to-end automation
+- `.github/workflows/self-healing-ci.yml` runs compile + strict self-heal checks in CI
 
 ---
 
