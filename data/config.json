@@ -24,6 +24,10 @@
     "usd_per_sol": 150,
     "max_tx_age_seconds": 3600
   },
+  "governing_token": {
+    "mint": "CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump",
+    "symbol": "OKK"
+  },
   "agentr": {
     "auto_heal_enabled": true,
     "strict_mode": false

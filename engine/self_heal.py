@@ -7,6 +7,8 @@ import os
 import time as _time
 
 from utils import (
+    load_config,
+    get_governing_token,
     load_market,
     save_market,
     list_traders,
@@ -19,11 +21,18 @@ from utils import (
 )
 
 
-def repair_market_structure(market: dict) -> tuple[dict, bool]:
+def repair_market_structure(market: dict, config: dict) -> tuple[dict, bool]:
     """Repair common structural issues in market state."""
     changed = False
+    governing_token = get_governing_token(config)
     if not isinstance(market, dict):
-        return {"stocks": {}, "market_status": "open", "last_updated": now_iso(), "total_market_cap": 0}, True
+        return {
+            "stocks": {},
+            "market_status": "open",
+            "last_updated": now_iso(),
+            "total_market_cap": 0,
+            "governing_token": governing_token,
+        }, True
 
     stocks = market.setdefault("stocks", {})
     for ticker, stock in stocks.items():
@@ -56,6 +65,9 @@ def repair_market_structure(market: dict) -> tuple[dict, bool]:
         stock.setdefault("volume_24h", 0)
         stock.setdefault("change_pct", 0.0)
         stock.setdefault("tags", [])
+        if stock.get("governing_token") != governing_token:
+            stock["governing_token"] = governing_token
+            changed = True
 
     computed_total = round(sum(s.get("market_cap", 0) for s in stocks.values()), 2)
     if market.get("total_market_cap") != computed_total:
@@ -64,6 +76,10 @@ def repair_market_structure(market: dict) -> tuple[dict, bool]:
 
     if not market.get("last_updated"):
         market["last_updated"] = now_iso()
+        changed = True
+
+    if market.get("governing_token") != governing_token:
+        market["governing_token"] = governing_token
         changed = True
 
     market.setdefault("market_status", "open")
@@ -88,9 +104,10 @@ def run_self_heal(strict: bool = False) -> dict:
     """Run full self-heal pass and return telemetry details."""
     start = _time.time()
     before_errors = validate_state()
+    config = load_config()
 
     market = load_market()
-    market, market_changed = repair_market_structure(market)
+    market, market_changed = repair_market_structure(market, config)
     if market_changed:
         save_market(market)
 

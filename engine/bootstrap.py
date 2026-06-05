@@ -7,6 +7,7 @@ import sys
 
 from utils import (
     load_config,
+    get_governing_token,
     save_market,
     append_price_snapshot,
     get_repo_metrics,
@@ -64,6 +65,7 @@ def calculate_initial_price(normalized: dict, weights: dict) -> float:
 
 def main():
     config = load_config()
+    governing_token = get_governing_token(config)
     repos = config["listed_repos"]
     weights = config["price_weights"]
 
@@ -115,6 +117,7 @@ def main():
             "ipo_date": today_str(),
             "metrics": all_metrics[repo_name],
             "tags": [],
+            "governing_token": governing_token,
         }
         price_snapshot[ticker] = price
         print(f"  {ticker}: ${price}")
@@ -125,6 +128,7 @@ def main():
         "last_updated": timestamp,
         "market_status": "open",
         "total_market_cap": round(total_cap, 2),
+        "governing_token": governing_token,
         "stocks": stocks,
     }
 
