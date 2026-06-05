@@ -1,0 +1,30 @@
+name: Self-healing CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  heal-and-verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Compile engine
+        run: python -m compileall engine
+
+      - name: Run AgentR self-heal (strict)
+        env:
+          AGENTR_STRICT_HEAL: "true"
+        working-directory: engine
+        run: python self_heal.py

@@ -47,10 +47,27 @@ body:
         - **Diversify** — spreading across multiple tickers reduces your risk.
         - You need enough cash in your balance to cover `price x quantity`.
         - New players start with $10,000 in cash.
+        - Optional on-chain settlement: include your Solana wallet + transaction signature below.
   - type: textarea
     id: notes
     attributes:
       label: Notes (optional)
       description: Any additional context for your trade
+    validations:
+      required: false
+  - type: input
+    id: solana_wallet
+    attributes:
+      label: Solana wallet (optional)
+      description: Public key used to send SOL for settlement
+      placeholder: 8xM4...yourWallet
+    validations:
+      required: false
+  - type: input
+    id: solana_signature
+    attributes:
+      label: Solana tx signature (optional)
+      description: Confirmed transfer signature to the configured treasury wallet
+      placeholder: 5Jd...signature
     validations:
       required: false

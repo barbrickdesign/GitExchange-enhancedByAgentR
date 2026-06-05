@@ -16,6 +16,18 @@
   "ipo_threshold_stars": 1000,
   "volatility_range": 0.03,
   "momentum_range": 0.08,
+  "solana": {
+    "enabled": true,
+    "require_payment_for_buy": false,
+    "rpc_url": "https://api.mainnet-beta.solana.com",
+    "treasury_wallet": "",
+    "usd_per_sol": 150,
+    "max_tx_age_seconds": 3600
+  },
+  "agentr": {
+    "auto_heal_enabled": true,
+    "strict_mode": false
+  },
   "listed_repos": [
     "facebook/react",
     "microsoft/vscode",

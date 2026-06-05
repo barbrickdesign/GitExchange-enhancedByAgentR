@@ -9,6 +9,7 @@ import re
 import sys
 import time as _time
 from datetime import datetime, timezone
+from typing import Any
 
 from utils import (
     load_config,
@@ -28,6 +29,7 @@ from utils import (
     load_json,
     HISTORY_DIR,
 )
+from solana_rpc import verify_payment_signature, usd_to_lamports, SolanaRPCError
 
 # ---------------------------------------------------------------------------
 # Parsing
@@ -35,6 +37,8 @@ from utils import (
 
 TRADE_REGEX = re.compile(r"^(BUY|SELL|SHORT|COVER)\s+(\w+)\s+(\d+)$", re.IGNORECASE)
 PORTFOLIO_REGEX = re.compile(r"^PORTFOLIO$", re.IGNORECASE)
+SIG_REGEX = re.compile(r"(?:solana[_\s-]?signature|signature)\s*[:=]\s*([1-9A-HJ-NP-Za-km-z]{88})", re.IGNORECASE)
+WALLET_REGEX = re.compile(r"(?:solana[_\s-]?wallet|wallet|from)\s*[:=]\s*([1-9A-HJ-NP-Za-km-z]{32,44})", re.IGNORECASE)
 
 
 def parse_trade(title: str) -> tuple[str, str, int] | None:
@@ -50,6 +54,21 @@ def parse_trade(title: str) -> tuple[str, str, int] | None:
 
 def is_portfolio_request(title: str) -> bool:
     return bool(PORTFOLIO_REGEX.match(title.strip()))
+
+
+def parse_payment_proof(issue_body: str) -> tuple[str | None, str | None]:
+    """Extract (wallet, signature) from issue body."""
+    if not issue_body:
+        return None, None
+    sig_match = SIG_REGEX.search(issue_body)
+    wallet_match = WALLET_REGEX.search(issue_body)
+    if not sig_match:
+        sig_match = re.search(r"###\s*Solana tx signature.*?\n([1-9A-HJ-NP-Za-km-z]{88})", issue_body, re.IGNORECASE | re.DOTALL)
+    if not wallet_match:
+        wallet_match = re.search(r"###\s*Solana wallet.*?\n([1-9A-HJ-NP-Za-km-z]{32,44})", issue_body, re.IGNORECASE | re.DOTALL)
+    signature = sig_match.group(1).strip() if sig_match else None
+    wallet = wallet_match.group(1).strip() if wallet_match else None
+    return wallet, signature
 
 
 # ---------------------------------------------------------------------------
@@ -307,6 +326,66 @@ def execute_trade(
     }
 
 
+def _trade_settlement_cost_usd(action: str, price: float, qty: int, config: dict) -> float:
+    fee_pct = config.get("trading_fee_pct", 0.001)
+    total = price * qty
+    fee = total * fee_pct
+    if action == "BUY":
+        return round(total + fee, 2)
+    return 0.0
+
+
+def verify_onchain_payment_if_required(
+    action: str,
+    qty: int,
+    ticker: str,
+    market: dict,
+    config: dict,
+    issue_body: str,
+) -> dict[str, Any] | None:
+    """Verify optional/required Solana payment proof for BUY actions."""
+    sol_cfg = config.get("solana", {})
+    if not sol_cfg.get("enabled", False):
+        return None
+    if action != "BUY":
+        return None
+
+    wallet, signature = parse_payment_proof(issue_body)
+    require_payment = sol_cfg.get("require_payment_for_buy", False)
+    if not (wallet and signature):
+        if require_payment:
+            raise ValueError(
+                "Solana payment proof required. Include `wallet: <public_key>` and "
+                "`signature: <tx_signature>` in the issue body."
+            )
+        return None
+
+    rpc_url = sol_cfg.get("rpc_url", "https://api.mainnet-beta.solana.com")
+    treasury_wallet = sol_cfg.get("treasury_wallet", "")
+    usd_per_sol = float(sol_cfg.get("usd_per_sol", 150))
+    max_tx_age_seconds = int(sol_cfg.get("max_tx_age_seconds", 3600))
+    if not treasury_wallet:
+        raise ValueError("Solana treasury_wallet is not configured.")
+
+    price = market.get("stocks", {}).get(ticker, {}).get("price")
+    if price is None:
+        raise ValueError(f"Ticker `{ticker}` is unavailable for on-chain settlement.")
+    settlement_usd = _trade_settlement_cost_usd(action, price, qty, config)
+    min_lamports = usd_to_lamports(settlement_usd, usd_per_sol)
+
+    payment = verify_payment_signature(
+        signature=signature,
+        sender_wallet=wallet,
+        destination_wallet=treasury_wallet,
+        min_lamports=min_lamports,
+        rpc_url=rpc_url,
+        max_tx_age_seconds=max_tx_age_seconds,
+    )
+    payment["required_usd"] = settlement_usd
+    payment["required_lamports"] = min_lamports
+    return payment
+
+
 # ---------------------------------------------------------------------------
 # Receipt
 # ---------------------------------------------------------------------------
@@ -331,6 +410,13 @@ def format_receipt(trade: dict, trader: dict, market: dict) -> str:
         f"| **Total** | ${trade['total']:,.2f} |",
         f"| **Fee** | ${trade['fee']:,.2f} |",
     ]
+    payment = trade.get("onchain_payment")
+    if payment:
+        lines.extend([
+            f"| **Settlement** | Solana RPC verified ✅ |",
+            f"| **Tx Signature** | `{payment.get('signature', '')}` |",
+            f"| **Lamports Received** | {payment.get('lamports', 0):,} |",
+        ])
 
     # Per-trade P&L for SELL/COVER
     if trade["action"] == "SELL":
@@ -562,6 +648,7 @@ def main():
     title = os.environ.get("ISSUE_TITLE", "")
     username = os.environ.get("ISSUE_USER", "")
     issue_number = int(os.environ.get("ISSUE_NUMBER", 0))
+    issue_body = os.environ.get("ISSUE_BODY", "")
 
     if not title or not username:
         print("Missing ISSUE_TITLE or ISSUE_USER environment variables.")
@@ -643,7 +730,25 @@ def main():
         return
 
     # 5. Execute
+    try:
+        onchain_payment = verify_onchain_payment_if_required(
+            action=action,
+            qty=qty,
+            ticker=ticker,
+            market=market,
+            config=config,
+            issue_body=issue_body,
+        )
+    except (ValueError, SolanaRPCError) as e:
+        post_issue_comment(issue_number, format_rejection(str(e)))
+        close_issue(issue_number)
+        print(f"Rejected (on-chain payment): {e}")
+        log_engine_run("trade", _time.time() - start, {"result": "rejected_onchain", "user": username})
+        return
+
     trade = execute_trade(action, ticker, qty, trader, market, config)
+    if onchain_payment:
+        trade["onchain_payment"] = onchain_payment
 
     # 6. Save state
     save_trader(username, trader)
