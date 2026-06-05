@@ -8,6 +8,8 @@
 
 Every repo is a ticker. Every issue is a trade. GitHub-native execution with optional Solana on-chain settlement.
 
+🪙 **Governing Token:** `OKK` (`CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump`)
+
 🟢 **Market OPEN** | Total Cap: $4.79M | 34 Stocks | 2 Traders | Last Update: 2026-06-05 13:02 UTC
 
 📈 **Top Gainer**: CAVEMAN +4.23% ($254.06) | 📉 **Top Loser**: AWESOMEDESIGNMD -7.94% ($260.36)

@@ -389,9 +389,11 @@
 
     function renderSolana() {
       const cfg = state.config?.solana;
+      const token = state.config?.governing_token;
       const el = document.getElementById('solana');
       if (!cfg) { el.textContent = 'Solana config not found.'; return; }
       el.innerHTML = `
+        Governing Token: <b>${token?.symbol || 'OKK'}</b> <code>${token?.mint || 'CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump'}</code><br>
         RPC: <b>${cfg.rpc_url || 'n/a'}</b><br>
         Mode: <b>${cfg.require_payment_for_buy ? 'Required for BUY' : 'Optional proof'}</b><br>
         Treasury: <code>${cfg.treasury_wallet || 'set in data/config.json'}</code><br>

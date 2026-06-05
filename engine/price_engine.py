@@ -8,6 +8,7 @@ import time as _time
 
 from utils import (
     load_config,
+    get_governing_token,
     load_market,
     save_market,
     load_trader,
@@ -96,6 +97,7 @@ def calculate_price(
 def main():
     start = _time.time()
     config = load_config()
+    governing_token = get_governing_token(config)
     market = load_market()
     stocks = market.get("stocks", {})
     weights = config["price_weights"]
@@ -166,6 +168,7 @@ def main():
         stocks[ticker]["change_pct"] = change_pct
         stocks[ticker]["market_cap"] = round(new_price * stocks[ticker]["shares_outstanding"], 2)
         stocks[ticker]["metrics"] = all_metrics[repo_name]
+        stocks[ticker]["governing_token"] = governing_token
 
         price_snapshot[ticker] = new_price
         direction = "+" if change_pct >= 0 else ""
@@ -175,6 +178,7 @@ def main():
     market["stocks"] = stocks
     market["total_market_cap"] = round(sum(s["market_cap"] for s in stocks.values()), 2)
     market["last_updated"] = now_iso()
+    market["governing_token"] = governing_token
     save_market(market)
 
     # 5. Write price snapshot to history

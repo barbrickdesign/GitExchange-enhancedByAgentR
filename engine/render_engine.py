@@ -13,6 +13,8 @@ import matplotlib.ticker as mticker
 
 from utils import (
     load_market,
+    load_config,
+    get_governing_token,
     load_trader,
     list_traders,
     load_json,
@@ -252,6 +254,12 @@ def render_market_status(market: dict) -> str:
         f"{trader_count} {traders_label} | "
         f"Last Update: {updated[:16].replace('T', ' ')} UTC"
     )
+
+
+def render_governing_token() -> str:
+    """Render governing token metadata."""
+    token = get_governing_token(load_config())
+    return f"🪙 **Governing Token:** `{token['symbol']}` (`{token['mint']}`)"
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -625,6 +633,7 @@ def render_readme(market: dict) -> None:
         price_chart = "*Chart will appear after the first price update.*"
 
     replacements = {
+        "<!-- GOVERNING_TOKEN -->": render_governing_token(),
         "<!-- MARKET_STATUS -->": render_market_status(market),
         "<!-- MARKET_TABLE -->": render_market_table(market),
         "<!-- LEADERBOARD -->": render_leaderboard(market),

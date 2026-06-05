@@ -48,9 +48,25 @@ def save_json(path: str | Path, data: dict | list) -> None:
 # Config
 # ---------------------------------------------------------------------------
 
+DEFAULT_GOVERNING_TOKEN = {
+    "mint": "CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump",
+    "symbol": "OKK",
+}
+
 
 def load_config() -> dict:
     return load_json(DATA_DIR / "config.json")
+
+
+def get_governing_token(config: dict | None = None) -> dict:
+    """Return the canonical repo-wide governing token configuration."""
+    cfg = config if isinstance(config, dict) else load_config()
+    token = cfg.get("governing_token", {})
+    if not isinstance(token, dict):
+        token = {}
+    mint = str(token.get("mint", "")).strip() or DEFAULT_GOVERNING_TOKEN["mint"]
+    symbol = str(token.get("symbol", "")).strip() or DEFAULT_GOVERNING_TOKEN["symbol"]
+    return {"mint": mint, "symbol": symbol}
 
 
 # ---------------------------------------------------------------------------
