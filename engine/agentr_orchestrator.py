@@ -3,7 +3,6 @@
 
 from __future__ import annotations
 
-import traceback
 import time as _time
 
 import event_engine
@@ -57,7 +56,6 @@ def main() -> None:
             print(f"  ❌ {r['name']} ({r.get('error', 'unknown error')})")
 
     if failed:
-        traceback.print_stack(limit=2)
         raise SystemExit(1)
 
 

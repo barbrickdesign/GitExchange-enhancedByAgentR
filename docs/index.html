@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GitExchange Pro Terminal</title>
   <meta name="description" content="Pro trading terminal for open-source repo markets with Solana settlement support.">
+  <meta property="og:title" content="GitExchange Pro Terminal">
+  <meta property="og:description" content="Professional market UI with charting tools, live prices, and optional Solana settlement verification.">
+  <meta property="og:type" content="website">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
   <style>
     :root {
@@ -250,7 +253,15 @@
   </div>
 
   <script>
-    const REPO = 'barbrickdesign/GitExchange-enhancedByAgentR';
+    function detectRepo() {
+      const pathParts = (window.location.pathname || '/').split('/').filter(Boolean);
+      const repoFromPath = pathParts[0];
+      const host = window.location.hostname || '';
+      const owner = host.endsWith('.github.io') ? host.split('.')[0] : 'barbrickdesign';
+      const repo = repoFromPath || 'GitExchange-enhancedByAgentR';
+      return `${owner}/${repo}`;
+    }
+    const REPO = detectRepo();
     const RAW = `https://raw.githubusercontent.com/${REPO}/main`;
 
     let state = { market: null, dashboard: null, config: null };
@@ -395,8 +406,8 @@
     function calcSMA(values, period) {
       const out = [];
       for (let i = 0; i < values.length; i++) {
-        if (i < period - 1 || values[i] == null) { out.push(null); continue; }
-        const chunk = values.slice(i - period + 1, i + 1).filter(v => v != null);
+        if (i < period - 1 || values[i] === null || values[i] === undefined) { out.push(null); continue; }
+        const chunk = values.slice(i - period + 1, i + 1).filter(v => v !== null && v !== undefined);
         out.push(chunk.length ? chunk.reduce((a,b) => a + b, 0) / chunk.length : null);
       }
       return out;
@@ -407,8 +418,8 @@
       const k = 2 / (period + 1);
       let prev = null;
       values.forEach(v => {
-        if (v == null) { out.push(null); return; }
-        prev = prev == null ? v : (v * k + prev * (1 - k));
+        if (v === null || v === undefined) { out.push(null); return; }
+        prev = (prev === null || prev === undefined) ? v : (v * k + prev * (1 - k));
         out.push(prev);
       });
       return out;
@@ -517,7 +528,11 @@
     updateClock();
     setInterval(updateClock, 1000);
     refreshAll();
-    setInterval(refreshAll, 20000);
+    setInterval(() => {
+      if (!document.hidden) {
+        refreshAll();
+      }
+    }, 30000);
   </script>
 </body>
 </html>

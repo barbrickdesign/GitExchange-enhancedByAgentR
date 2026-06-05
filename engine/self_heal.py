@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import os
 import time as _time
 
 from utils import (
@@ -112,7 +113,7 @@ def run_self_heal(strict: bool = False) -> dict:
 
 
 def main() -> None:
-    strict = ("" + __import__("os").environ.get("AGENTR_STRICT_HEAL", "false")).lower() == "true"
+    strict = os.environ.get("AGENTR_STRICT_HEAL", "false").lower() == "true"
     details = run_self_heal(strict=strict)
     print(
         "Self-heal complete — "

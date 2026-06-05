@@ -8,7 +8,8 @@ from datetime import datetime, timezone
 
 import requests
 
-BASE58_RE = re.compile(r"^[1-9A-HJ-NP-Za-km-z]{32,128}$")
+WALLET_RE = re.compile(r"^[1-9A-HJ-NP-Za-km-z]{32,44}$")
+SIGNATURE_RE = re.compile(r"^[1-9A-HJ-NP-Za-km-z]{88}$")
 
 
 class SolanaRPCError(RuntimeError):
@@ -31,8 +32,12 @@ def _rpc_request(rpc_url: str, method: str, params: list, timeout: int = 20) -> 
     return data.get("result")
 
 
-def is_base58(value: str) -> bool:
-    return bool(value and BASE58_RE.match(value.strip()))
+def is_valid_wallet(value: str) -> bool:
+    return bool(value and WALLET_RE.match(value.strip()))
+
+
+def is_valid_signature(value: str) -> bool:
+    return bool(value and SIGNATURE_RE.match(value.strip()))
 
 
 def sol_to_lamports(sol: float) -> int:
@@ -98,12 +103,14 @@ def verify_payment_signature(
     max_tx_age_seconds: int = 3600,
 ) -> dict:
     """Verify a confirmed SOL transfer to treasury wallet meets required lamports."""
-    if not is_base58(signature):
+    if not is_valid_signature(signature):
         raise SolanaRPCError("invalid Solana signature format")
-    if not is_base58(sender_wallet):
+    if not is_valid_wallet(sender_wallet):
         raise SolanaRPCError("invalid sender wallet format")
-    if not is_base58(destination_wallet):
+    if not is_valid_wallet(destination_wallet):
         raise SolanaRPCError("invalid destination wallet format")
+    if destination_wallet == "11111111111111111111111111111111":
+        raise SolanaRPCError("invalid destination wallet: configure a real treasury wallet")
 
     tx = get_transaction(signature, rpc_url)
 
@@ -113,7 +120,7 @@ def verify_payment_signature(
 
     block_time = tx.get("blockTime")
     if block_time:
-        age = int(datetime.now(timezone.utc).timestamp() - int(block_time))
+        age = int(datetime.now(timezone.utc).timestamp()) - int(block_time)
         if age > max_tx_age_seconds:
             raise SolanaRPCError(
                 f"transaction too old ({age}s). Submit a payment within the last {max_tx_age_seconds}s"

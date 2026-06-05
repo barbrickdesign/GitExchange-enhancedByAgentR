@@ -37,8 +37,8 @@ from solana_rpc import verify_payment_signature, usd_to_lamports, SolanaRPCError
 
 TRADE_REGEX = re.compile(r"^(BUY|SELL|SHORT|COVER)\s+(\w+)\s+(\d+)$", re.IGNORECASE)
 PORTFOLIO_REGEX = re.compile(r"^PORTFOLIO$", re.IGNORECASE)
-SIG_REGEX = re.compile(r"(?:solana[_\s-]?signature|signature)\s*[:=]\s*([1-9A-HJ-NP-Za-km-z]{32,128})", re.IGNORECASE)
-WALLET_REGEX = re.compile(r"(?:solana[_\s-]?wallet|wallet|from)\s*[:=]\s*([1-9A-HJ-NP-Za-km-z]{32,128})", re.IGNORECASE)
+SIG_REGEX = re.compile(r"(?:solana[_\s-]?signature|signature)\s*[:=]\s*([1-9A-HJ-NP-Za-km-z]{88})", re.IGNORECASE)
+WALLET_REGEX = re.compile(r"(?:solana[_\s-]?wallet|wallet|from)\s*[:=]\s*([1-9A-HJ-NP-Za-km-z]{32,44})", re.IGNORECASE)
 
 
 def parse_trade(title: str) -> tuple[str, str, int] | None:
@@ -62,6 +62,10 @@ def parse_payment_proof(issue_body: str) -> tuple[str | None, str | None]:
         return None, None
     sig_match = SIG_REGEX.search(issue_body)
     wallet_match = WALLET_REGEX.search(issue_body)
+    if not sig_match:
+        sig_match = re.search(r"###\s*Solana tx signature.*?\n([1-9A-HJ-NP-Za-km-z]{88})", issue_body, re.IGNORECASE | re.DOTALL)
+    if not wallet_match:
+        wallet_match = re.search(r"###\s*Solana wallet.*?\n([1-9A-HJ-NP-Za-km-z]{32,44})", issue_body, re.IGNORECASE | re.DOTALL)
     signature = sig_match.group(1).strip() if sig_match else None
     wallet = wallet_match.group(1).strip() if wallet_match else None
     return wallet, signature
@@ -363,7 +367,9 @@ def verify_onchain_payment_if_required(
     if not treasury_wallet:
         raise ValueError("Solana treasury_wallet is not configured.")
 
-    price = market["stocks"][ticker]["price"]
+    price = market.get("stocks", {}).get(ticker, {}).get("price")
+    if price is None:
+        raise ValueError(f"Ticker `{ticker}` is unavailable for on-chain settlement.")
     settlement_usd = _trade_settlement_cost_usd(action, price, qty, config)
     min_lamports = usd_to_lamports(settlement_usd, usd_per_sol)
 
