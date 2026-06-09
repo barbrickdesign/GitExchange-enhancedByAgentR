@@ -9,6 +9,23 @@
       "recipients": 1,
       "commits_week": 130,
       "timestamp": "2026-06-09T01:04:41Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.88,
+      "total_paid": 11.64,
+      "recipients": 1,
+      "commits_week": 135,
+      "timestamp": "2026-06-09T03:27:43Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "opencodereview",
+      "full_name": "alibaba/open-code-review",
+      "initial_price": 186.43,
+      "stars_at_ipo": 5486,
+      "timestamp": "2026-06-09T03:27:43Z"
     }
   ]
 }
