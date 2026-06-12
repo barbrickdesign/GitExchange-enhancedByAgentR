@@ -18,6 +18,32 @@
       "recipients": 1,
       "commits_week": 81,
       "timestamp": "2026-06-12T03:24:24Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.82,
+      "total_paid": 11.46,
+      "recipients": 1,
+      "commits_week": 456,
+      "timestamp": "2026-06-12T06:25:28Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.67,
+      "total_paid": 13.35,
+      "recipients": 1,
+      "commits_week": 81,
+      "timestamp": "2026-06-12T06:25:28Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "mimocode",
+      "full_name": "XiaomiMiMo/MiMo-Code",
+      "initial_price": 161.1,
+      "stars_at_ipo": 5232,
+      "timestamp": "2026-06-12T06:25:28Z"
     }
   ]
 }
