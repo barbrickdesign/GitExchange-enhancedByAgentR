@@ -1,18 +1,6 @@
 {
   "runs": [
     {
-      "engine": "self_heal",
-      "timestamp": "2026-06-13T22:29:47Z",
-      "duration_s": 0.0,
-      "details": {
-        "errors_before": 0,
-        "errors_after": 0,
-        "market_repaired": false,
-        "traders_repaired": 0,
-        "strict": false
-      }
-    },
-    {
       "engine": "price",
       "timestamp": "2026-06-13T22:34:18Z",
       "duration_s": 271.04,
@@ -1577,6 +1565,16 @@
             "attempt": 1
           }
         ]
+      }
+    },
+    {
+      "engine": "price",
+      "timestamp": "2026-06-16T08:10:18Z",
+      "duration_s": 148.64,
+      "details": {
+        "stocks_updated": 39,
+        "traders_recalculated": 2,
+        "api_failures": 39
       }
     }
   ]
