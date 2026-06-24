@@ -45,6 +45,33 @@
       "recipients": 1,
       "commits_week": 51,
       "timestamp": "2026-06-24T11:13:45Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.91,
+      "total_paid": 11.73,
+      "recipients": 1,
+      "commits_week": 263,
+      "timestamp": "2026-06-24T15:09:10Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.67,
+      "total_paid": 13.35,
+      "recipients": 1,
+      "commits_week": 57,
+      "timestamp": "2026-06-24T15:09:10Z"
+    },
+    {
+      "type": "CRASH",
+      "ticker": "awesomegptimage2apiandprompts",
+      "full_name": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "reason": "deleted/not found",
+      "prev_price": 176.0,
+      "affected_holders": 0,
+      "timestamp": "2026-06-24T15:09:10Z"
     }
   ]
 }
