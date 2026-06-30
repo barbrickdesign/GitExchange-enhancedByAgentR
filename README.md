@@ -10,7 +10,7 @@ Every repo is a ticker. Every issue is a trade. GitHub-native execution with opt
 
 🪙 **Governing Token:** `OKK` (`CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump`)
 
-🟢 **Market OPEN** | Total Cap: $5.36M | 40 Stocks | 2 Traders | Last Update: 2026-06-30 01:03 UTC
+🟢 **Market OPEN** | Total Cap: $5.36M | 40 Stocks | 2 Traders | Last Update: 2026-06-30 01:06 UTC
 
 📈 **Top Gainer**: CLIANYTHING +40.59% ($250.02) | 📉 **Top Loser**: DESIGNMD -27.32% ($113.36)
 
@@ -107,7 +107,7 @@ Pick a stock and open a trade in one click:
 
 | Rank | Trader | Portfolio Value | P&L | Trades | Achievements |
 |------|--------|-----------------|-----|--------|--------------|
-| 🥇 | @SolanaLeeky | $16,392.40 | +$6,392.40 (+63.9%) | 12 | 🎯 📄 🔔 🐦 💎 |
+| 🥇 | @SolanaLeeky | $16,404.22 | +$6,404.22 (+64.0%) | 12 | 🎯 📄 🔔 🐦 💎 |
 | 🥈 | @neurobytex | $8,808.88 | -$1,191.12 (-11.9%) | 1 | 🎯 💎 🦊 |
 
 ---
