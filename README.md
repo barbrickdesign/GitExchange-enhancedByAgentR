@@ -10,7 +10,7 @@ Every repo is a ticker. Every issue is a trade. GitHub-native execution with opt
 
 🪙 **Governing Token:** `OKK` (`CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump`)
 
-🟢 **Market OPEN** | Total Cap: $5.64M | 40 Stocks | 2 Traders | Last Update: 2026-07-03 00:50 UTC
+🟢 **Market OPEN** | Total Cap: $5.64M | 40 Stocks | 2 Traders | Last Update: 2026-07-03 00:52 UTC
 
 📈 **Top Gainer**: CAVEMAN +6.68% ($269.60) | 📉 **Top Loser**: GBRAIN -7.39% ($168.36)
 
@@ -107,7 +107,7 @@ Pick a stock and open a trade in one click:
 
 | Rank | Trader | Portfolio Value | P&L | Trades | Achievements |
 |------|--------|-----------------|-----|--------|--------------|
-| 🥇 | @SolanaLeeky | $17,573.60 | +$7,573.60 (+75.7%) | 12 | 🎯 📄 🔔 🐦 💎 |
+| 🥇 | @SolanaLeeky | $17,598.33 | +$7,598.33 (+76.0%) | 12 | 🎯 📄 🔔 🐦 💎 |
 | 🥈 | @neurobytex | $9,565.93 | -$434.07 (-4.3%) | 1 | 🎯 💎 🦊 |
 
 ---
