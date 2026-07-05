@@ -10,7 +10,7 @@ Every repo is a ticker. Every issue is a trade. GitHub-native execution with opt
 
 🪙 **Governing Token:** `OKK` (`CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump`)
 
-🟢 **Market OPEN** | Total Cap: $5.46M | 40 Stocks | 2 Traders | Last Update: 2026-07-05 00:54 UTC
+🟢 **Market OPEN** | Total Cap: $5.46M | 40 Stocks | 2 Traders | Last Update: 2026-07-05 00:56 UTC
 
 📈 **Top Gainer**: NEMOCLAW +13.27% ($333.23) | 📉 **Top Loser**: GBRAIN -37.13% ($111.45)
 
@@ -107,7 +107,7 @@ Pick a stock and open a trade in one click:
 
 | Rank | Trader | Portfolio Value | P&L | Trades | Achievements |
 |------|--------|-----------------|-----|--------|--------------|
-| 🥇 | @SolanaLeeky | $17,663.03 | +$7,663.03 (+76.6%) | 12 | 🎯 📄 🔔 🐦 💎 |
+| 🥇 | @SolanaLeeky | $17,686.12 | +$7,686.12 (+76.9%) | 12 | 🎯 📄 🔔 🐦 💎 |
 | 🥈 | @neurobytex | $9,438.93 | -$561.07 (-5.6%) | 1 | 🎯 💎 🦊 |
 
 ---
