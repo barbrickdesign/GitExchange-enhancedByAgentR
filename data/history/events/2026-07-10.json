@@ -1,0 +1,31 @@
+{
+  "date": "2026-07-10",
+  "events": [
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.73,
+      "total_paid": 11.19,
+      "recipients": 1,
+      "commits_week": 483,
+      "timestamp": "2026-07-10T03:56:13Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.56,
+      "total_paid": 12.8,
+      "recipients": 1,
+      "commits_week": 75,
+      "timestamp": "2026-07-10T03:56:13Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "deepspec",
+      "full_name": "deepseek-ai/DeepSpec",
+      "initial_price": 162.75,
+      "stars_at_ipo": 6501,
+      "timestamp": "2026-07-10T03:56:13Z"
+    }
+  ]
+}
