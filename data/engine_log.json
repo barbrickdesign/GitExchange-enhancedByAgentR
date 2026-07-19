@@ -1,41 +1,6 @@
 {
   "runs": [
     {
-      "engine": "agentr_orchestrator",
-      "timestamp": "2026-07-16T17:05:12Z",
-      "duration_s": 1851.15,
-      "details": {
-        "status": "ok",
-        "steps": [
-          {
-            "name": "self_heal_preflight",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "price_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "event_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "render_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "self_heal_post",
-            "status": "ok",
-            "attempt": 1
-          }
-        ]
-      }
-    },
-    {
       "engine": "price",
       "timestamp": "2026-07-16T18:32:21Z",
       "duration_s": 173.47,
@@ -1599,6 +1564,16 @@
             "attempt": 1
           }
         ]
+      }
+    },
+    {
+      "engine": "price",
+      "timestamp": "2026-07-19T00:46:36Z",
+      "duration_s": 195.4,
+      "details": {
+        "stocks_updated": 47,
+        "traders_recalculated": 2,
+        "api_failures": 47
       }
     }
   ]
