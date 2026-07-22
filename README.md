@@ -10,7 +10,7 @@ Every repo is a ticker. Every issue is a trade. GitHub-native execution with opt
 
 🪙 **Governing Token:** `OKK` (`CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump`)
 
-🟢 **Market OPEN** | Total Cap: $6.60M | 46 Stocks | 2 Traders | Last Update: 2026-07-22 00:43 UTC
+🟢 **Market OPEN** | Total Cap: $6.60M | 46 Stocks | 2 Traders | Last Update: 2026-07-22 00:44 UTC
 
 📈 **Top Gainer**: VSCODE +36.71% ($847.44) | 📉 **Top Loser**: REACT -19.64% ($502.33)
 
@@ -113,7 +113,7 @@ Pick a stock and open a trade in one click:
 
 | Rank | Trader | Portfolio Value | P&L | Trades | Achievements |
 |------|--------|-----------------|-----|--------|--------------|
-| 🥇 | @SolanaLeeky | $20,526.13 | +$10,526.13 (+105.3%) | 12 | 🎯 📄 🔔 🐦 💎 |
+| 🥇 | @SolanaLeeky | $20,553.80 | +$10,553.80 (+105.5%) | 12 | 🎯 📄 🔔 🐦 💎 |
 | 🥈 | @neurobytex | $8,741.63 | -$1,258.37 (-12.6%) | 1 | 🎯 💎 🦊 |
 
 ---
