@@ -72,6 +72,32 @@
       "recipients": 1,
       "commits_week": 66,
       "timestamp": "2026-07-22T10:52:48Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.94,
+      "total_paid": 11.82,
+      "recipients": 1,
+      "commits_week": 172,
+      "timestamp": "2026-07-22T15:58:15Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 3.09,
+      "total_paid": 15.45,
+      "recipients": 1,
+      "commits_week": 73,
+      "timestamp": "2026-07-22T15:58:15Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "aosce",
+      "full_name": "unicity-aos/aos-ce",
+      "initial_price": 181.33,
+      "stars_at_ipo": 6392,
+      "timestamp": "2026-07-22T15:58:15Z"
     }
   ]
 }
