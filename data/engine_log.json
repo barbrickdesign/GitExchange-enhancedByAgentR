@@ -1,16 +1,6 @@
 {
   "runs": [
     {
-      "engine": "price",
-      "timestamp": "2026-07-20T05:51:56Z",
-      "duration_s": 1969.01,
-      "details": {
-        "stocks_updated": 47,
-        "traders_recalculated": 2,
-        "api_failures": 47
-      }
-    },
-    {
       "engine": "events",
       "timestamp": "2026-07-20T05:52:20Z",
       "duration_s": 23.75,
@@ -1578,6 +1568,16 @@
             "attempt": 1
           }
         ]
+      }
+    },
+    {
+      "engine": "price",
+      "timestamp": "2026-07-22T13:16:57Z",
+      "duration_s": 2338.68,
+      "details": {
+        "stocks_updated": 47,
+        "traders_recalculated": 2,
+        "api_failures": 47
       }
     }
   ]
