@@ -10,7 +10,7 @@ Every repo is a ticker. Every issue is a trade. GitHub-native execution with opt
 
 🪙 **Governing Token:** `OKK` (`CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump`)
 
-🟢 **Market OPEN** | Total Cap: $6.64M | 49 Stocks | 2 Traders | Last Update: 2026-08-01 00:46 UTC
+🟢 **Market OPEN** | Total Cap: $6.64M | 49 Stocks | 2 Traders | Last Update: 2026-08-01 00:47 UTC
 
 📈 **Top Gainer**: PAPERCLIP +39.67% ($364.05) | 📉 **Top Loser**: VSCODE -16.88% ($674.73)
 
@@ -116,7 +116,7 @@ Pick a stock and open a trade in one click:
 
 | Rank | Trader | Portfolio Value | P&L | Trades | Achievements |
 |------|--------|-----------------|-----|--------|--------------|
-| 🥇 | @SolanaLeeky | $21,875.05 | +$11,875.05 (+118.8%) | 12 | 🎯 📄 🔔 🐦 💎 |
+| 🥇 | @SolanaLeeky | $21,899.11 | +$11,899.11 (+119.0%) | 12 | 🎯 📄 🔔 🐦 💎 |
 | 🥈 | @neurobytex | $9,503.73 | -$496.27 (-5.0%) | 1 | 🎯 💎 🦊 |
 
 ---
