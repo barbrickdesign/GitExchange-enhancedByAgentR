@@ -116,6 +116,24 @@
       "initial_price": 190.36,
       "stars_at_ipo": 10272,
       "timestamp": "2026-08-07T14:31:43Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.99,
+      "total_paid": 11.97,
+      "recipients": 1,
+      "commits_week": 650,
+      "timestamp": "2026-08-07T16:27:17Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.1,
+      "total_paid": 10.5,
+      "recipients": 1,
+      "commits_week": 122,
+      "timestamp": "2026-08-07T16:27:17Z"
     }
   ]
 }
