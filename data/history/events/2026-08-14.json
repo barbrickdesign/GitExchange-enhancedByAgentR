@@ -1,0 +1,31 @@
+{
+  "date": "2026-08-14",
+  "events": [
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.91,
+      "total_paid": 11.73,
+      "recipients": 1,
+      "commits_week": 726,
+      "timestamp": "2026-08-14T03:33:25Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 1.88,
+      "total_paid": 9.4,
+      "recipients": 1,
+      "commits_week": 107,
+      "timestamp": "2026-08-14T03:33:25Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "kimik3",
+      "full_name": "MoonshotAI/Kimi-K3",
+      "initial_price": 160.89,
+      "stars_at_ipo": 8425,
+      "timestamp": "2026-08-14T03:33:25Z"
+    }
+  ]
+}
