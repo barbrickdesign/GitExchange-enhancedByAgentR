@@ -18,6 +18,32 @@
       "recipients": 1,
       "commits_week": 132,
       "timestamp": "2026-08-15T02:46:48Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.96,
+      "total_paid": 11.88,
+      "recipients": 1,
+      "commits_week": 888,
+      "timestamp": "2026-08-15T04:29:29Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.05,
+      "total_paid": 10.25,
+      "recipients": 1,
+      "commits_week": 132,
+      "timestamp": "2026-08-15T04:29:29Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "watermarksremover",
+      "full_name": "guillaumemeyer/watermarks-remover",
+      "initial_price": 183.5,
+      "stars_at_ipo": 8452,
+      "timestamp": "2026-08-15T04:29:29Z"
     }
   ]
 }
