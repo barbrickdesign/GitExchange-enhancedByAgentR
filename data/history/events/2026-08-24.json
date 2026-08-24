@@ -36,6 +36,23 @@
       "recipients": 1,
       "commits_week": 84,
       "timestamp": "2026-08-24T11:01:47Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.57,
+      "total_paid": 10.71,
+      "recipients": 1,
+      "commits_week": 94,
+      "timestamp": "2026-08-24T14:25:33Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "dshdesktop",
+      "full_name": "anywhere-labs/dsh-desktop",
+      "initial_price": 244.58,
+      "stars_at_ipo": 19576,
+      "timestamp": "2026-08-24T14:25:33Z"
     }
   ]
 }
