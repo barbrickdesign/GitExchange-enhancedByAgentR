@@ -10,7 +10,7 @@ Every repo is a ticker. Every issue is a trade. GitHub-native execution with opt
 
 🪙 **Governing Token:** `OKK` (`CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump`)
 
-🟢 **Market OPEN** | Total Cap: $7.60M | 56 Stocks | 2 Traders | Last Update: 2026-09-03 00:44 UTC
+🟢 **Market OPEN** | Total Cap: $7.69M | 57 Stocks | 2 Traders | Last Update: 2026-09-03 00:47 UTC
 
 📈 **Top Gainer**: BROWSERHARNESS +10.20% ($209.68) | 📉 **Top Loser**: VSCODE -8.58% ($728.65)
 
@@ -100,6 +100,7 @@ Pick a stock and open a trade in one click:
 | **DESIGNMD** | google-labs-code/design.md | $182.05 | 🔴 -3.34% | 0 | $91.0K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+designmd+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+designmd+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+designmd+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **IMG2THREEJS** | img2threejs/img2threejs | $177.32 | 🟢 +6.63% | 0 | $88.7K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+img2threejs+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+img2threejs+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+img2threejs+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **UNLIMITEDOCR** | baidu/Unlimited-OCR | $177.22 | 🔴 -7.17% | 0 | $88.6K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+unlimitedocr+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+unlimitedocr+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+unlimitedocr+10&body=Adjust+quantity+in+the+title+then+submit) |
+| **DSHROUTINGSUITE** | yjh051108/dsh-routing-suite | $176.48 | ⚪ 0.00% | 0 | $88.2K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+dshroutingsuite+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+dshroutingsuite+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+dshroutingsuite+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **CODEXDREAMSKIN** | Fei-Away/Codex-Dream-Skin | $175.75 | 🔴 -1.45% | 0 | $87.9K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+codexdreamskin+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+codexdreamskin+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+codexdreamskin+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **HUASHUDESIGN** | alchaincyf/huashu-design | $174.70 | 🔴 -0.20% | 0 | $87.3K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+huashudesign+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+huashudesign+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+huashudesign+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **ANYDOC** | firecrawl/anydoc | $174.18 | 🔴 -5.72% | 0 | $87.1K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+anydoc+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+anydoc+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+anydoc+10&body=Adjust+quantity+in+the+title+then+submit) |
@@ -123,7 +124,7 @@ Pick a stock and open a trade in one click:
 
 | Rank | Trader | Portfolio Value | P&L | Trades | Achievements |
 |------|--------|-----------------|-----|--------|--------------|
-| 🥇 | @SolanaLeeky | $25,048.53 | +$15,048.53 (+150.5%) | 12 | 🎯 📄 🔔 🐦 💎 |
+| 🥇 | @SolanaLeeky | $25,059.45 | +$15,059.45 (+150.6%) | 12 | 🎯 📄 🔔 🐦 💎 |
 | 🥈 | @neurobytex | $9,646.33 | -$353.67 (-3.5%) | 1 | 🎯 💎 🦊 |
 
 ---
