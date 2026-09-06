@@ -1,86 +1,6 @@
 {
   "runs": [
     {
-      "engine": "price",
-      "timestamp": "2026-09-03T17:04:47Z",
-      "duration_s": 2801.9,
-      "details": {
-        "stocks_updated": 58,
-        "traders_recalculated": 2,
-        "api_failures": 58
-      }
-    },
-    {
-      "engine": "events",
-      "timestamp": "2026-09-03T17:05:18Z",
-      "duration_s": 31.16,
-      "details": {
-        "total_events": 1,
-        "dividends": 1,
-        "ipos": 0,
-        "margin_calls": 0,
-        "achievements": 0,
-        "history_rotated": 0
-      }
-    },
-    {
-      "engine": "self_heal",
-      "timestamp": "2026-09-03T17:05:24Z",
-      "duration_s": 0.0,
-      "details": {
-        "errors_before": 0,
-        "errors_after": 0,
-        "market_repaired": false,
-        "traders_repaired": 0,
-        "strict": true
-      }
-    },
-    {
-      "engine": "agentr_orchestrator",
-      "timestamp": "2026-09-03T17:05:24Z",
-      "duration_s": 2839.47,
-      "details": {
-        "status": "ok",
-        "steps": [
-          {
-            "name": "self_heal_preflight",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "price_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "event_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "render_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "self_heal_post",
-            "status": "ok",
-            "attempt": 1
-          }
-        ]
-      }
-    },
-    {
-      "engine": "price",
-      "timestamp": "2026-09-03T20:27:05Z",
-      "duration_s": 7749.37,
-      "details": {
-        "stocks_updated": 58,
-        "traders_recalculated": 2,
-        "api_failures": 58
-      }
-    },
-    {
       "engine": "self_heal",
       "timestamp": "2026-09-03T22:15:24Z",
       "duration_s": 0.0,
@@ -1575,6 +1495,88 @@
         "margin_calls": 0,
         "achievements": 0,
         "history_rotated": 2
+      }
+    },
+    {
+      "engine": "self_heal",
+      "timestamp": "2026-09-06T02:23:29Z",
+      "duration_s": 0.0,
+      "details": {
+        "errors_before": 0,
+        "errors_after": 0,
+        "market_repaired": false,
+        "traders_repaired": 0,
+        "strict": false
+      }
+    },
+    {
+      "engine": "price",
+      "timestamp": "2026-09-06T02:29:47Z",
+      "duration_s": 377.98,
+      "details": {
+        "stocks_updated": 58,
+        "traders_recalculated": 2,
+        "api_failures": 58
+      }
+    },
+    {
+      "engine": "events",
+      "timestamp": "2026-09-06T02:30:18Z",
+      "duration_s": 30.43,
+      "details": {
+        "total_events": 1,
+        "dividends": 1,
+        "ipos": 0,
+        "margin_calls": 0,
+        "achievements": 0,
+        "history_rotated": 0
+      }
+    },
+    {
+      "engine": "self_heal",
+      "timestamp": "2026-09-06T02:30:23Z",
+      "duration_s": 0.0,
+      "details": {
+        "errors_before": 0,
+        "errors_after": 0,
+        "market_repaired": false,
+        "traders_repaired": 0,
+        "strict": true
+      }
+    },
+    {
+      "engine": "agentr_orchestrator",
+      "timestamp": "2026-09-06T02:30:23Z",
+      "duration_s": 414.24,
+      "details": {
+        "status": "ok",
+        "steps": [
+          {
+            "name": "self_heal_preflight",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "price_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "event_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "render_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "self_heal_post",
+            "status": "ok",
+            "attempt": 1
+          }
+        ]
       }
     }
   ]
