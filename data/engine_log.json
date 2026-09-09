@@ -2,88 +2,6 @@
   "runs": [
     {
       "engine": "self_heal",
-      "timestamp": "2026-09-07T14:17:53Z",
-      "duration_s": 0.0,
-      "details": {
-        "errors_before": 0,
-        "errors_after": 0,
-        "market_repaired": false,
-        "traders_repaired": 0,
-        "strict": false
-      }
-    },
-    {
-      "engine": "price",
-      "timestamp": "2026-09-07T14:44:08Z",
-      "duration_s": 1574.3,
-      "details": {
-        "stocks_updated": 58,
-        "traders_recalculated": 2,
-        "api_failures": 58
-      }
-    },
-    {
-      "engine": "events",
-      "timestamp": "2026-09-07T14:44:40Z",
-      "duration_s": 32.66,
-      "details": {
-        "total_events": 1,
-        "dividends": 1,
-        "ipos": 0,
-        "margin_calls": 0,
-        "achievements": 0,
-        "history_rotated": 0
-      }
-    },
-    {
-      "engine": "self_heal",
-      "timestamp": "2026-09-07T14:44:43Z",
-      "duration_s": 0.0,
-      "details": {
-        "errors_before": 0,
-        "errors_after": 0,
-        "market_repaired": false,
-        "traders_repaired": 0,
-        "strict": true
-      }
-    },
-    {
-      "engine": "agentr_orchestrator",
-      "timestamp": "2026-09-07T14:44:43Z",
-      "duration_s": 1609.99,
-      "details": {
-        "status": "ok",
-        "steps": [
-          {
-            "name": "self_heal_preflight",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "price_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "event_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "render_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "self_heal_post",
-            "status": "ok",
-            "attempt": 1
-          }
-        ]
-      }
-    },
-    {
-      "engine": "self_heal",
       "timestamp": "2026-09-07T16:17:25Z",
       "duration_s": 0.0,
       "details": {
@@ -1577,6 +1495,88 @@
         "stocks_updated": 59,
         "traders_recalculated": 2,
         "api_failures": 59
+      }
+    },
+    {
+      "engine": "self_heal",
+      "timestamp": "2026-09-09T20:16:40Z",
+      "duration_s": 0.0,
+      "details": {
+        "errors_before": 0,
+        "errors_after": 0,
+        "market_repaired": false,
+        "traders_repaired": 0,
+        "strict": false
+      }
+    },
+    {
+      "engine": "price",
+      "timestamp": "2026-09-09T21:05:51Z",
+      "duration_s": 2950.7,
+      "details": {
+        "stocks_updated": 59,
+        "traders_recalculated": 2,
+        "api_failures": 59
+      }
+    },
+    {
+      "engine": "events",
+      "timestamp": "2026-09-09T21:06:22Z",
+      "duration_s": 31.09,
+      "details": {
+        "total_events": 2,
+        "dividends": 2,
+        "ipos": 0,
+        "margin_calls": 0,
+        "achievements": 0,
+        "history_rotated": 0
+      }
+    },
+    {
+      "engine": "self_heal",
+      "timestamp": "2026-09-09T21:06:27Z",
+      "duration_s": 0.0,
+      "details": {
+        "errors_before": 0,
+        "errors_after": 0,
+        "market_repaired": false,
+        "traders_repaired": 0,
+        "strict": true
+      }
+    },
+    {
+      "engine": "agentr_orchestrator",
+      "timestamp": "2026-09-09T21:06:27Z",
+      "duration_s": 2987.16,
+      "details": {
+        "status": "ok",
+        "steps": [
+          {
+            "name": "self_heal_preflight",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "price_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "event_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "render_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "self_heal_post",
+            "status": "ok",
+            "attempt": 1
+          }
+        ]
       }
     }
   ]
