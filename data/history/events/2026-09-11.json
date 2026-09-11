@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-11",
+  "events": [
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.87,
+      "total_paid": 11.61,
+      "recipients": 1,
+      "commits_week": 617,
+      "timestamp": "2026-09-11T03:25:48Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 1.84,
+      "total_paid": 9.2,
+      "recipients": 1,
+      "commits_week": 100,
+      "timestamp": "2026-09-11T03:25:48Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "praxist",
+      "full_name": "sapientinc/PRAXIST",
+      "initial_price": 160.59,
+      "stars_at_ipo": 6501,
+      "timestamp": "2026-09-11T03:25:48Z"
+    }
+  ]
+}
