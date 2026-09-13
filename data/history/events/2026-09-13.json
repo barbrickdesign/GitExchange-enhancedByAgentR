@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-13",
+  "events": [
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.89,
+      "total_paid": 11.67,
+      "recipients": 1,
+      "commits_week": 532,
+      "timestamp": "2026-09-13T02:31:08Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 1.9,
+      "total_paid": 9.5,
+      "recipients": 1,
+      "commits_week": 101,
+      "timestamp": "2026-09-13T02:31:08Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "openbot",
+      "full_name": "CopilotKit/OpenBot",
+      "initial_price": 202.57,
+      "stars_at_ipo": 4823,
+      "timestamp": "2026-09-13T02:31:08Z"
+    }
+  ]
+}
