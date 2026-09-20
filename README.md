@@ -10,7 +10,7 @@ Every repo is a ticker. Every issue is a trade. GitHub-native execution with opt
 
 🪙 **Governing Token:** `OKK` (`CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump`)
 
-🟢 **Market OPEN** | Total Cap: $8.45M | 65 Stocks | 2 Traders | Last Update: 2026-09-20 00:47 UTC
+🟢 **Market OPEN** | Total Cap: $8.53M | 66 Stocks | 2 Traders | Last Update: 2026-09-20 00:50 UTC
 
 📈 **Top Gainer**: NEXTJS +39.40% ($574.64) | 📉 **Top Loser**: VSCODE -20.72% ($594.28)
 
@@ -117,6 +117,7 @@ Pick a stock and open a trade in one click:
 | **PRAXIST** | sapientinc/PRAXIST | $161.41 | 🟢 +4.59% | 0 | $80.7K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+praxist+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+praxist+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+praxist+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **OPENMYTHOS** | kyegomez/OpenMythos | $160.28 | 🔴 -10.11% | 0 | $80.1K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+openmythos+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+openmythos+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+openmythos+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **DEEPSPEC** | deepseek-ai/DeepSpec | $159.77 | 🟢 +0.84% | 0 | $79.9K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+deepspec+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+deepspec+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+deepspec+10&body=Adjust+quantity+in+the+title+then+submit) |
+| **HOWTOLIVEBETTER** | eternity4719/HowToLiveBetter | $158.72 | ⚪ 0.00% | 0 | $79.4K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+howtolivebetter+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+howtolivebetter+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+howtolivebetter+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **SDKJS** | unicity-astrid/sdk-js | $158.30 | 🔴 -0.72% | 0 | $79.2K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+sdkjs+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+sdkjs+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+sdkjs+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **HTMLANYTHING** | nexu-io/html-anything | $157.96 | 🔴 -2.05% | 0 | $79.0K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+htmlanything+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+htmlanything+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+htmlanything+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **IMG2THREEJS** | img2threejs/img2threejs | $157.74 | 🔴 -2.69% | 0 | $78.9K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+img2threejs+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+img2threejs+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+img2threejs+10&body=Adjust+quantity+in+the+title+then+submit) |
@@ -132,7 +133,7 @@ Pick a stock and open a trade in one click:
 
 | Rank | Trader | Portfolio Value | P&L | Trades | Achievements |
 |------|--------|-----------------|-----|--------|--------------|
-| 🥇 | @SolanaLeeky | $27,761.82 | +$17,761.82 (+177.6%) | 12 | 🎯 📄 🔔 🐦 💎 |
+| 🥇 | @SolanaLeeky | $27,785.08 | +$17,785.08 (+177.9%) | 12 | 🎯 📄 🔔 🐦 💎 |
 | 🥈 | @neurobytex | $8,738.88 | -$1,261.12 (-12.6%) | 1 | 🎯 💎 🦊 |
 
 ---
