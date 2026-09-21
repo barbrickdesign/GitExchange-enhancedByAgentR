@@ -18,6 +18,23 @@
       "recipients": 1,
       "commits_week": 55,
       "timestamp": "2026-09-21T04:30:00Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.23,
+      "total_paid": 9.69,
+      "recipients": 1,
+      "commits_week": 66,
+      "timestamp": "2026-09-21T09:17:24Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "laya",
+      "full_name": "NandhaKishorM/laya",
+      "initial_price": 167.0,
+      "stars_at_ipo": 6470,
+      "timestamp": "2026-09-21T09:17:24Z"
     }
   ]
 }
