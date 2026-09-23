@@ -10,7 +10,7 @@ Every repo is a ticker. Every issue is a trade. GitHub-native execution with opt
 
 🪙 **Governing Token:** `OKK` (`CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump`)
 
-🟢 **Market OPEN** | Total Cap: $8.72M | 67 Stocks | 2 Traders | Last Update: 2026-09-22 21:33 UTC
+🟢 **Market OPEN** | Total Cap: $8.72M | 67 Stocks | 2 Traders | Last Update: 2026-09-23 00:43 UTC
 
 📈 **Top Gainer**: QM +11.92% ($220.73) | 📉 **Top Loser**: PRETEXT -9.70% ($248.19)
 
@@ -134,7 +134,7 @@ Pick a stock and open a trade in one click:
 
 | Rank | Trader | Portfolio Value | P&L | Trades | Achievements |
 |------|--------|-----------------|-----|--------|--------------|
-| 🥇 | @SolanaLeeky | $28,277.80 | +$18,277.80 (+182.8%) | 12 | 🎯 📄 🔔 🐦 💎 |
+| 🥇 | @SolanaLeeky | $28,289.41 | +$18,289.41 (+182.9%) | 12 | 🎯 📄 🔔 🐦 💎 |
 | 🥈 | @neurobytex | $8,764.73 | -$1,235.27 (-12.4%) | 1 | 🎯 💎 🦊 |
 
 ---
