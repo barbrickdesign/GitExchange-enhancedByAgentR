@@ -18,6 +18,32 @@
       "recipients": 1,
       "commits_week": 149,
       "timestamp": "2026-09-25T00:30:55Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.99,
+      "total_paid": 11.97,
+      "recipients": 1,
+      "commits_week": 751,
+      "timestamp": "2026-09-25T04:19:49Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.95,
+      "total_paid": 14.75,
+      "recipients": 1,
+      "commits_week": 157,
+      "timestamp": "2026-09-25T04:19:49Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "kev",
+      "full_name": "jaredpalmer/kev",
+      "initial_price": 213.51,
+      "stars_at_ipo": 6786,
+      "timestamp": "2026-09-25T04:19:49Z"
     }
   ]
 }

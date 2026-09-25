@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-25T04:05:15Z",
+  "last_updated": "2026-09-25T04:19:49Z",
   "market_status": "open",
-  "total_market_cap": 8676195.0,
+  "total_market_cap": 8782950.0,
   "stocks": {
     "react": {
       "full_name": "facebook/react",
@@ -1625,6 +1625,26 @@
         "mint": "CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump",
         "symbol": "OKK"
       }
+    },
+    "kev": {
+      "full_name": "jaredpalmer/kev",
+      "price": 213.51,
+      "prev_price": 213.51,
+      "change_pct": 0.0,
+      "volume_24h": 0,
+      "market_cap": 106755.0,
+      "shares_outstanding": 500,
+      "ipo_date": "2026-09-25",
+      "metrics": {
+        "stars": 6786,
+        "forks": 391,
+        "commits_week": 157,
+        "issue_response_hrs": 8.9,
+        "contributors": 8
+      },
+      "tags": [
+        "ipo-new"
+      ]
     }
   },
   "governing_token": {
