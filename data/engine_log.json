@@ -1,18 +1,6 @@
 {
   "runs": [
     {
-      "engine": "self_heal",
-      "timestamp": "2026-09-21T20:24:46Z",
-      "duration_s": 0.0,
-      "details": {
-        "errors_before": 0,
-        "errors_after": 0,
-        "market_repaired": false,
-        "traders_repaired": 0,
-        "strict": true
-      }
-    },
-    {
       "engine": "agentr_orchestrator",
       "timestamp": "2026-09-21T20:24:46Z",
       "duration_s": 503.11,
@@ -1511,6 +1499,19 @@
         "stocks_updated": 69,
         "traders_recalculated": 2,
         "api_failures": 69
+      }
+    },
+    {
+      "engine": "events",
+      "timestamp": "2026-09-27T04:41:15Z",
+      "duration_s": 33.12,
+      "details": {
+        "total_events": 0,
+        "dividends": 0,
+        "ipos": 0,
+        "margin_calls": 0,
+        "achievements": 0,
+        "history_rotated": 0
       }
     }
   ]
