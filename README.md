@@ -10,7 +10,7 @@ Every repo is a ticker. Every issue is a trade. GitHub-native execution with opt
 
 🪙 **Governing Token:** `OKK` (`CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump`)
 
-🟢 **Market OPEN** | Total Cap: $8.95M | 68 Stocks | 2 Traders | Last Update: 2026-09-30 00:48 UTC
+🟢 **Market OPEN** | Total Cap: $8.95M | 68 Stocks | 2 Traders | Last Update: 2026-09-30 00:50 UTC
 
 📈 **Top Gainer**: SVELTE +28.39% ($415.63) | 📉 **Top Loser**: DESIGNMD -19.09% ($160.68)
 
@@ -135,7 +135,7 @@ Pick a stock and open a trade in one click:
 
 | Rank | Trader | Portfolio Value | P&L | Trades | Achievements |
 |------|--------|-----------------|-----|--------|--------------|
-| 🥇 | @SolanaLeeky | $29,029.72 | +$19,029.72 (+190.3%) | 12 | 🎯 📄 🔔 🐦 💎 |
+| 🥇 | @SolanaLeeky | $29,056.06 | +$19,056.06 (+190.6%) | 12 | 🎯 📄 🔔 🐦 💎 |
 | 🥈 | @neurobytex | $8,736.43 | -$1,263.57 (-12.6%) | 1 | 🎯 💎 🦊 |
 
 ---
