@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-02",
+  "events": [
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.98,
+      "total_paid": 11.94,
+      "recipients": 1,
+      "commits_week": 489,
+      "timestamp": "2026-10-02T02:35:01Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.58,
+      "total_paid": 12.9,
+      "recipients": 1,
+      "commits_week": 118,
+      "timestamp": "2026-10-02T02:35:01Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "fastjevcompaction",
+      "full_name": "tamaratran/fast-jev-compaction",
+      "initial_price": 159.98,
+      "stars_at_ipo": 7309,
+      "timestamp": "2026-10-02T02:35:01Z"
+    }
+  ]
+}
