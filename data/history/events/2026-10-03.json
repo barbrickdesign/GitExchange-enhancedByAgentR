@@ -72,6 +72,32 @@
       "recipients": 1,
       "commits_week": 178,
       "timestamp": "2026-10-03T10:23:38Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.82,
+      "total_paid": 11.46,
+      "recipients": 1,
+      "commits_week": 689,
+      "timestamp": "2026-10-03T15:09:22Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.92,
+      "total_paid": 14.6,
+      "recipients": 1,
+      "commits_week": 178,
+      "timestamp": "2026-10-03T15:09:22Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "strata",
+      "full_name": "Niko1221/Strata",
+      "initial_price": 371.84,
+      "stars_at_ipo": 7854,
+      "timestamp": "2026-10-03T15:09:22Z"
     }
   ]
 }
