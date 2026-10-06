@@ -27,6 +27,23 @@
       "recipients": 1,
       "commits_week": 195,
       "timestamp": "2026-10-06T09:09:36Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 2.9,
+      "total_paid": 8.7,
+      "recipients": 1,
+      "commits_week": 210,
+      "timestamp": "2026-10-06T10:48:53Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "compositor",
+      "full_name": "robbietilton/Compositor",
+      "initial_price": 171.43,
+      "stars_at_ipo": 8576,
+      "timestamp": "2026-10-06T10:48:53Z"
     }
   ]
 }
