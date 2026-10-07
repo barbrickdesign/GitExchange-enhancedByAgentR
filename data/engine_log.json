@@ -1,63 +1,6 @@
 {
   "runs": [
     {
-      "engine": "price",
-      "timestamp": "2026-10-04T19:11:00Z",
-      "duration_s": 302.25,
-      "details": {
-        "stocks_updated": 71,
-        "traders_recalculated": 2,
-        "api_failures": 71
-      }
-    },
-    {
-      "engine": "self_heal",
-      "timestamp": "2026-10-04T20:58:33Z",
-      "duration_s": 0.0,
-      "details": {
-        "errors_before": 0,
-        "errors_after": 0,
-        "market_repaired": false,
-        "traders_repaired": 0,
-        "strict": false
-      }
-    },
-    {
-      "engine": "price",
-      "timestamp": "2026-10-04T21:06:41Z",
-      "duration_s": 488.08,
-      "details": {
-        "stocks_updated": 71,
-        "traders_recalculated": 2,
-        "api_failures": 71
-      }
-    },
-    {
-      "engine": "events",
-      "timestamp": "2026-10-04T21:07:18Z",
-      "duration_s": 36.74,
-      "details": {
-        "total_events": 0,
-        "dividends": 0,
-        "ipos": 0,
-        "margin_calls": 0,
-        "achievements": 0,
-        "history_rotated": 0
-      }
-    },
-    {
-      "engine": "self_heal",
-      "timestamp": "2026-10-04T21:07:22Z",
-      "duration_s": 0.0,
-      "details": {
-        "errors_before": 0,
-        "errors_after": 0,
-        "market_repaired": false,
-        "traders_repaired": 0,
-        "strict": true
-      }
-    },
-    {
       "engine": "agentr_orchestrator",
       "timestamp": "2026-10-04T21:07:22Z",
       "duration_s": 528.62,
@@ -1574,6 +1517,88 @@
         "stocks_updated": 72,
         "traders_recalculated": 2,
         "api_failures": 72
+      }
+    },
+    {
+      "engine": "self_heal",
+      "timestamp": "2026-10-07T02:32:14Z",
+      "duration_s": 0.0,
+      "details": {
+        "errors_before": 0,
+        "errors_after": 0,
+        "market_repaired": false,
+        "traders_repaired": 0,
+        "strict": false
+      }
+    },
+    {
+      "engine": "price",
+      "timestamp": "2026-10-07T03:15:55Z",
+      "duration_s": 2621.16,
+      "details": {
+        "stocks_updated": 72,
+        "traders_recalculated": 2,
+        "api_failures": 72
+      }
+    },
+    {
+      "engine": "events",
+      "timestamp": "2026-10-07T03:16:31Z",
+      "duration_s": 36.37,
+      "details": {
+        "total_events": 2,
+        "dividends": 2,
+        "ipos": 0,
+        "margin_calls": 0,
+        "achievements": 0,
+        "history_rotated": 2
+      }
+    },
+    {
+      "engine": "self_heal",
+      "timestamp": "2026-10-07T03:16:38Z",
+      "duration_s": 0.0,
+      "details": {
+        "errors_before": 0,
+        "errors_after": 0,
+        "market_repaired": false,
+        "traders_repaired": 0,
+        "strict": true
+      }
+    },
+    {
+      "engine": "agentr_orchestrator",
+      "timestamp": "2026-10-07T03:16:38Z",
+      "duration_s": 2664.55,
+      "details": {
+        "status": "ok",
+        "steps": [
+          {
+            "name": "self_heal_preflight",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "price_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "event_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "render_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "self_heal_post",
+            "status": "ok",
+            "attempt": 1
+          }
+        ]
       }
     }
   ]
