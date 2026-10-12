@@ -10,7 +10,7 @@ Every repo is a ticker. Every issue is a trade. GitHub-native execution with opt
 
 🪙 **Governing Token:** `OKK` (`CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump`)
 
-🟢 **Market OPEN** | Total Cap: $8.83M | 72 Stocks | 2 Traders | Last Update: 2026-10-12 00:53 UTC
+🟢 **Market OPEN** | Total Cap: $8.83M | 72 Stocks | 2 Traders | Last Update: 2026-10-12 00:56 UTC
 
 📈 **Top Gainer**: COLIBRI +47.72% ($538.60) | 📉 **Top Loser**: ZEROLANG -64.16% ($48.77)
 
@@ -139,7 +139,7 @@ Pick a stock and open a trade in one click:
 
 | Rank | Trader | Portfolio Value | P&L | Trades | Achievements |
 |------|--------|-----------------|-----|--------|--------------|
-| 🥇 | @SolanaLeeky | $30,783.63 | +$20,783.63 (+207.8%) | 12 | 🎯 📄 🔔 🐦 💎 |
+| 🥇 | @SolanaLeeky | $30,799.58 | +$20,799.58 (+208.0%) | 12 | 🎯 📄 🔔 🐦 💎 |
 | 🥈 | @neurobytex | $9,710.93 | -$289.07 (-2.9%) | 1 | 🎯 💎 🦊 |
 
 ---
