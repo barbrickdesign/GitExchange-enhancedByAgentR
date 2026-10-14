@@ -135,6 +135,24 @@
       "prev_price": 158.71,
       "affected_holders": 0,
       "timestamp": "2026-10-14T17:17:42Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 2.91,
+      "total_paid": 8.73,
+      "recipients": 1,
+      "commits_week": 368,
+      "timestamp": "2026-10-14T20:26:26Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.7,
+      "total_paid": 13.5,
+      "recipients": 1,
+      "commits_week": 84,
+      "timestamp": "2026-10-14T20:26:26Z"
     }
   ]
 }
