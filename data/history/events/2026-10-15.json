@@ -36,6 +36,32 @@
       "recipients": 1,
       "commits_week": 92,
       "timestamp": "2026-10-15T05:14:38Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 2.56,
+      "total_paid": 7.68,
+      "recipients": 1,
+      "commits_week": 437,
+      "timestamp": "2026-10-15T09:49:21Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.4,
+      "total_paid": 12.0,
+      "recipients": 1,
+      "commits_week": 100,
+      "timestamp": "2026-10-15T09:49:21Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "dshourfreemodel",
+      "full_name": "Ebony-Vinyl/dsh-our-free-model",
+      "initial_price": 181.96,
+      "stars_at_ipo": 17127,
+      "timestamp": "2026-10-15T09:49:21Z"
     }
   ]
 }
