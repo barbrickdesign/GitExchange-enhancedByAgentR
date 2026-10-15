@@ -1,85 +1,6 @@
 {
   "runs": [
     {
-      "engine": "self_heal",
-      "timestamp": "2026-10-12T16:29:14Z",
-      "duration_s": 0.0,
-      "details": {
-        "errors_before": 0,
-        "errors_after": 0,
-        "market_repaired": false,
-        "traders_repaired": 0,
-        "strict": true
-      }
-    },
-    {
-      "engine": "agentr_orchestrator",
-      "timestamp": "2026-10-12T16:29:14Z",
-      "duration_s": 632.31,
-      "details": {
-        "status": "ok",
-        "steps": [
-          {
-            "name": "self_heal_preflight",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "price_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "event_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "render_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "self_heal_post",
-            "status": "ok",
-            "attempt": 1
-          }
-        ]
-      }
-    },
-    {
-      "engine": "price",
-      "timestamp": "2026-10-12T19:15:43Z",
-      "duration_s": 3432.87,
-      "details": {
-        "stocks_updated": 73,
-        "traders_recalculated": 2,
-        "api_failures": 73
-      }
-    },
-    {
-      "engine": "self_heal",
-      "timestamp": "2026-10-12T20:18:35Z",
-      "duration_s": 0.0,
-      "details": {
-        "errors_before": 0,
-        "errors_after": 0,
-        "market_repaired": false,
-        "traders_repaired": 0,
-        "strict": false
-      }
-    },
-    {
-      "engine": "price",
-      "timestamp": "2026-10-12T20:27:27Z",
-      "duration_s": 532.46,
-      "details": {
-        "stocks_updated": 73,
-        "traders_recalculated": 2,
-        "api_failures": 73
-      }
-    },
-    {
       "engine": "events",
       "timestamp": "2026-10-12T20:28:05Z",
       "duration_s": 37.75,
@@ -1601,6 +1522,88 @@
         "stocks_updated": 74,
         "traders_recalculated": 2,
         "api_failures": 74
+      }
+    },
+    {
+      "engine": "self_heal",
+      "timestamp": "2026-10-15T02:22:55Z",
+      "duration_s": 0.0,
+      "details": {
+        "errors_before": 0,
+        "errors_after": 0,
+        "market_repaired": false,
+        "traders_repaired": 0,
+        "strict": false
+      }
+    },
+    {
+      "engine": "price",
+      "timestamp": "2026-10-15T03:14:17Z",
+      "duration_s": 3082.42,
+      "details": {
+        "stocks_updated": 74,
+        "traders_recalculated": 2,
+        "api_failures": 74
+      }
+    },
+    {
+      "engine": "events",
+      "timestamp": "2026-10-15T03:14:52Z",
+      "duration_s": 34.63,
+      "details": {
+        "total_events": 2,
+        "dividends": 2,
+        "ipos": 0,
+        "margin_calls": 0,
+        "achievements": 0,
+        "history_rotated": 2
+      }
+    },
+    {
+      "engine": "self_heal",
+      "timestamp": "2026-10-15T03:14:59Z",
+      "duration_s": 0.0,
+      "details": {
+        "errors_before": 0,
+        "errors_after": 0,
+        "market_repaired": false,
+        "traders_repaired": 0,
+        "strict": true
+      }
+    },
+    {
+      "engine": "agentr_orchestrator",
+      "timestamp": "2026-10-15T03:14:59Z",
+      "duration_s": 3124.02,
+      "details": {
+        "status": "ok",
+        "steps": [
+          {
+            "name": "self_heal_preflight",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "price_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "event_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "render_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "self_heal_post",
+            "status": "ok",
+            "attempt": 1
+          }
+        ]
       }
     }
   ]
