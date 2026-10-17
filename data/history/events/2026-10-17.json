@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-17",
+  "events": [
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.26,
+      "total_paid": 9.78,
+      "recipients": 1,
+      "commits_week": 890,
+      "timestamp": "2026-10-17T04:42:09Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.35,
+      "total_paid": 11.75,
+      "recipients": 1,
+      "commits_week": 141,
+      "timestamp": "2026-10-17T04:42:09Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "pdfcraft",
+      "full_name": "storytold/pdfcraft",
+      "initial_price": 337.76,
+      "stars_at_ipo": 15083,
+      "timestamp": "2026-10-17T04:42:09Z"
+    }
+  ]
+}
