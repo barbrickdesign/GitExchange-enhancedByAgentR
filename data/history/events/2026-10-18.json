@@ -53,6 +53,23 @@
       "recipients": 1,
       "commits_week": 119,
       "timestamp": "2026-10-18T14:23:05Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.62,
+      "total_paid": 13.1,
+      "recipients": 1,
+      "commits_week": 119,
+      "timestamp": "2026-10-18T16:56:17Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "magpie",
+      "full_name": "yetone/magpie",
+      "initial_price": 214.26,
+      "stars_at_ipo": 15795,
+      "timestamp": "2026-10-18T16:56:17Z"
     }
   ]
 }
