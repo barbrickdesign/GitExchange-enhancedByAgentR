@@ -90,6 +90,32 @@
       "recipients": 1,
       "commits_week": 84,
       "timestamp": "2026-10-21T17:00:49Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 2.8,
+      "total_paid": 8.4,
+      "recipients": 1,
+      "commits_week": 700,
+      "timestamp": "2026-10-21T22:00:18Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.64,
+      "total_paid": 13.2,
+      "recipients": 1,
+      "commits_week": 110,
+      "timestamp": "2026-10-21T22:00:18Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "cleanyourtv",
+      "full_name": "Gathin23/cleanyourtv",
+      "initial_price": 428.05,
+      "stars_at_ipo": 18716,
+      "timestamp": "2026-10-21T22:00:18Z"
     }
   ]
 }
