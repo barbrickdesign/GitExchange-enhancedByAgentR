@@ -2,88 +2,6 @@
   "runs": [
     {
       "engine": "agentr_orchestrator",
-      "timestamp": "2026-10-27T20:23:45Z",
-      "duration_s": 640.66,
-      "details": {
-        "status": "ok",
-        "steps": [
-          {
-            "name": "self_heal_preflight",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "price_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "event_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "render_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "self_heal_post",
-            "status": "ok",
-            "attempt": 1
-          }
-        ]
-      }
-    },
-    {
-      "engine": "self_heal",
-      "timestamp": "2026-10-27T22:10:32Z",
-      "duration_s": 0.0,
-      "details": {
-        "errors_before": 0,
-        "errors_after": 0,
-        "market_repaired": false,
-        "traders_repaired": 0,
-        "strict": false
-      }
-    },
-    {
-      "engine": "price",
-      "timestamp": "2026-10-27T22:20:08Z",
-      "duration_s": 575.93,
-      "details": {
-        "stocks_updated": 80,
-        "traders_recalculated": 2,
-        "api_failures": 80
-      }
-    },
-    {
-      "engine": "events",
-      "timestamp": "2026-10-27T22:20:50Z",
-      "duration_s": 42.53,
-      "details": {
-        "total_events": 2,
-        "dividends": 2,
-        "ipos": 0,
-        "margin_calls": 0,
-        "achievements": 0,
-        "history_rotated": 0
-      }
-    },
-    {
-      "engine": "self_heal",
-      "timestamp": "2026-10-27T22:20:58Z",
-      "duration_s": 0.0,
-      "details": {
-        "errors_before": 0,
-        "errors_after": 0,
-        "market_repaired": false,
-        "traders_repaired": 0,
-        "strict": true
-      }
-    },
-    {
-      "engine": "agentr_orchestrator",
       "timestamp": "2026-10-27T22:20:58Z",
       "duration_s": 626.51,
       "details": {
@@ -1570,6 +1488,88 @@
       "engine": "agentr_orchestrator",
       "timestamp": "2026-10-30T02:27:22Z",
       "duration_s": 600.46,
+      "details": {
+        "status": "ok",
+        "steps": [
+          {
+            "name": "self_heal_preflight",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "price_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "event_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "render_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "self_heal_post",
+            "status": "ok",
+            "attempt": 1
+          }
+        ]
+      }
+    },
+    {
+      "engine": "self_heal",
+      "timestamp": "2026-10-30T04:14:09Z",
+      "duration_s": 0.0,
+      "details": {
+        "errors_before": 0,
+        "errors_after": 0,
+        "market_repaired": false,
+        "traders_repaired": 0,
+        "strict": false
+      }
+    },
+    {
+      "engine": "price",
+      "timestamp": "2026-10-30T04:23:17Z",
+      "duration_s": 548.25,
+      "details": {
+        "stocks_updated": 80,
+        "traders_recalculated": 2,
+        "api_failures": 80
+      }
+    },
+    {
+      "engine": "events",
+      "timestamp": "2026-10-30T04:23:59Z",
+      "duration_s": 41.73,
+      "details": {
+        "total_events": 2,
+        "dividends": 2,
+        "ipos": 0,
+        "margin_calls": 0,
+        "achievements": 0,
+        "history_rotated": 0
+      }
+    },
+    {
+      "engine": "self_heal",
+      "timestamp": "2026-10-30T04:24:07Z",
+      "duration_s": 0.0,
+      "details": {
+        "errors_before": 0,
+        "errors_after": 0,
+        "market_repaired": false,
+        "traders_repaired": 0,
+        "strict": true
+      }
+    },
+    {
+      "engine": "agentr_orchestrator",
+      "timestamp": "2026-10-30T04:24:07Z",
+      "duration_s": 598.77,
       "details": {
         "status": "ok",
         "steps": [
