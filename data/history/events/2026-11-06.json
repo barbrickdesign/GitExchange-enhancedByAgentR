@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-06",
+  "events": [
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.44,
+      "total_paid": 10.32,
+      "recipients": 1,
+      "commits_week": 943,
+      "timestamp": "2026-11-06T02:25:18Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.78,
+      "total_paid": 13.9,
+      "recipients": 1,
+      "commits_week": 180,
+      "timestamp": "2026-11-06T02:25:18Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "gpuunlock",
+      "full_name": "Zagitta/gpu-unlock",
+      "initial_price": 175.4,
+      "stars_at_ipo": 17277,
+      "timestamp": "2026-11-06T02:25:18Z"
+    }
+  ]
+}
