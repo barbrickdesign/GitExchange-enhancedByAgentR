@@ -116,6 +116,32 @@
       "recipients": 1,
       "commits_week": 190,
       "timestamp": "2026-11-06T16:23:44Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 2.83,
+      "total_paid": 8.49,
+      "recipients": 1,
+      "commits_week": 1107,
+      "timestamp": "2026-11-06T20:20:50Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.63,
+      "total_paid": 13.15,
+      "recipients": 1,
+      "commits_week": 196,
+      "timestamp": "2026-11-06T20:20:50Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "craftanything",
+      "full_name": "storytold/craft-anything",
+      "initial_price": 250.71,
+      "stars_at_ipo": 17697,
+      "timestamp": "2026-11-06T20:20:50Z"
     }
   ]
 }
