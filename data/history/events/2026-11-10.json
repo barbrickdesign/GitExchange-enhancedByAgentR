@@ -63,6 +63,32 @@
       "recipients": 1,
       "commits_week": 52,
       "timestamp": "2026-11-10T14:23:48Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.1,
+      "total_paid": 9.3,
+      "recipients": 1,
+      "commits_week": 297,
+      "timestamp": "2026-11-10T16:26:20Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 1.92,
+      "total_paid": 9.6,
+      "recipients": 1,
+      "commits_week": 52,
+      "timestamp": "2026-11-10T16:26:20Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "dshgo",
+      "full_name": "ccch1mneyyy/dsh-Go",
+      "initial_price": 239.76,
+      "stars_at_ipo": 18544,
+      "timestamp": "2026-11-10T16:26:20Z"
     }
   ]
 }
