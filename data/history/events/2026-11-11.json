@@ -108,6 +108,24 @@
       "recipients": 1,
       "commits_week": 100,
       "timestamp": "2026-11-11T16:23:54Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.35,
+      "total_paid": 10.05,
+      "recipients": 1,
+      "commits_week": 847,
+      "timestamp": "2026-11-11T20:21:48Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 1.74,
+      "total_paid": 8.7,
+      "recipients": 1,
+      "commits_week": 106,
+      "timestamp": "2026-11-11T20:21:48Z"
     }
   ]
 }
