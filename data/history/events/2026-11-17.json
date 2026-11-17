@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-17",
+  "events": [
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.03,
+      "total_paid": 9.09,
+      "recipients": 1,
+      "commits_week": 186,
+      "timestamp": "2026-11-17T02:26:18Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.09,
+      "total_paid": 10.45,
+      "recipients": 1,
+      "commits_week": 53,
+      "timestamp": "2026-11-17T02:26:18Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "aerialtv",
+      "full_name": "pengchujin/aerial-tv",
+      "initial_price": 196.44,
+      "stars_at_ipo": 12200,
+      "timestamp": "2026-11-17T02:26:18Z"
+    }
+  ]
+}
