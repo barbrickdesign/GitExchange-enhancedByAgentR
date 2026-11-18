@@ -36,6 +36,32 @@
       "recipients": 1,
       "commits_week": 114,
       "timestamp": "2026-11-18T04:22:26Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 3.2,
+      "total_paid": 9.6,
+      "recipients": 1,
+      "commits_week": 406,
+      "timestamp": "2026-11-18T08:29:32Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.64,
+      "total_paid": 13.2,
+      "recipients": 1,
+      "commits_week": 115,
+      "timestamp": "2026-11-18T08:29:32Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "misterdownloadmanager",
+      "full_name": "anefzaoui/misterdownloadmanager",
+      "initial_price": 222.54,
+      "stars_at_ipo": 12479,
+      "timestamp": "2026-11-18T08:29:32Z"
     }
   ]
 }
