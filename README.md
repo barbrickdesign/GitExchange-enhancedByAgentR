@@ -10,7 +10,7 @@ Every repo is a ticker. Every issue is a trade. GitHub-native execution with opt
 
 🪙 **Governing Token:** `OKK` (`CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump`)
 
-🟢 **Market OPEN** | Total Cap: $10.54M | 85 Stocks | 2 Traders | Last Update: 2026-11-23 06:32 UTC
+🟢 **Market OPEN** | Total Cap: $10.81M | 86 Stocks | 2 Traders | Last Update: 2026-11-23 06:50 UTC
 
 📈 **Top Gainer**: HUASHUDESIGN +20.12% ($174.96) | 📉 **Top Loser**: VSCODE -20.76% ($434.31)
 
@@ -62,6 +62,7 @@ Pick a stock and open a trade in one click:
 |--------|------|-------|------------|--------|------------|-------|
 | **AWESOMEDSHPLUGIN** | awesome-dsh-plugin/awesome-dsh-plugin | $599.04 | 🟢 +5.09% | 0 | $299.5K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+awesomedshplugin+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+awesomedshplugin+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+awesomedshplugin+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **REACT** | facebook/react | $543.17 | 🟢 +0.10% | 22 | $271.6K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+react+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+react+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+react+10&body=Adjust+quantity+in+the+title+then+submit) |
+| **LEONIDA** | ItsNotRexed/Leonida | $538.24 | ⚪ 0.00% | 0 | $269.1K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+leonida+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+leonida+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+leonida+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **CLAWCODE** | ultraworkers/claw-code | $527.40 | 🔴 -9.65% | 0 | $263.7K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+clawcode+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+clawcode+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+clawcode+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **NEXTJS** | vercel/next.js | $517.23 | 🟢 +10.93% | 5 | $258.6K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+nextjs+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+nextjs+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+nextjs+10&body=Adjust+quantity+in+the+title+then+submit) |
 | **PHOTOCRAFT** | storytold/photocraft | $484.60 | 🟢 +4.33% | 0 | $242.3K | [Buy](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=BUY+photocraft+10&body=Adjust+quantity+in+the+title+then+submit) [Sell](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SELL+photocraft+5&body=Adjust+quantity+in+the+title+then+submit) [Short](https://github.com/barbrickdesign/GitExchange-enhancedByAgentR/issues/new?title=SHORT+photocraft+10&body=Adjust+quantity+in+the+title+then+submit) |
@@ -152,7 +153,7 @@ Pick a stock and open a trade in one click:
 
 | Rank | Trader | Portfolio Value | P&L | Trades | Achievements |
 |------|--------|-----------------|-----|--------|--------------|
-| 🥇 | @SolanaLeeky | $35,139.94 | +$25,139.94 (+251.4%) | 12 | 🎯 📄 🔔 🐦 💎 |
+| 🥇 | @SolanaLeeky | $35,146.45 | +$25,146.45 (+251.5%) | 12 | 🎯 📄 🔔 🐦 💎 |
 | 🥈 | @neurobytex | $8,945.83 | -$1,054.17 (-10.5%) | 1 | 🎯 💎 🦊 |
 
 ---
