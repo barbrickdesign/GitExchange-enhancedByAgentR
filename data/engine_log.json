@@ -1,86 +1,6 @@
 {
   "runs": [
     {
-      "engine": "agentr_orchestrator",
-      "timestamp": "2026-11-19T16:23:58Z",
-      "duration_s": 722.46,
-      "details": {
-        "status": "ok",
-        "steps": [
-          {
-            "name": "self_heal_preflight",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "price_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "event_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "render_engine",
-            "status": "ok",
-            "attempt": 1
-          },
-          {
-            "name": "self_heal_post",
-            "status": "ok",
-            "attempt": 1
-          }
-        ]
-      }
-    },
-    {
-      "engine": "price",
-      "timestamp": "2026-11-19T18:18:30Z",
-      "duration_s": 416.73,
-      "details": {
-        "stocks_updated": 87,
-        "traders_recalculated": 2,
-        "api_failures": 87
-      }
-    },
-    {
-      "engine": "self_heal",
-      "timestamp": "2026-11-19T20:11:01Z",
-      "duration_s": 0.0,
-      "details": {
-        "errors_before": 0,
-        "errors_after": 0,
-        "market_repaired": false,
-        "traders_repaired": 0,
-        "strict": false
-      }
-    },
-    {
-      "engine": "price",
-      "timestamp": "2026-11-19T20:21:32Z",
-      "duration_s": 631.4,
-      "details": {
-        "stocks_updated": 87,
-        "traders_recalculated": 2,
-        "api_failures": 87
-      }
-    },
-    {
-      "engine": "events",
-      "timestamp": "2026-11-19T20:22:20Z",
-      "duration_s": 48.19,
-      "details": {
-        "total_events": 2,
-        "dividends": 2,
-        "ipos": 0,
-        "margin_calls": 0,
-        "achievements": 0,
-        "history_rotated": 0
-      }
-    },
-    {
       "engine": "self_heal",
       "timestamp": "2026-11-19T20:22:29Z",
       "duration_s": 0.0,
@@ -1544,6 +1464,88 @@
       "engine": "agentr_orchestrator",
       "timestamp": "2026-11-23T07:03:16Z",
       "duration_s": 701.37,
+      "details": {
+        "status": "ok",
+        "steps": [
+          {
+            "name": "self_heal_preflight",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "price_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "event_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "render_engine",
+            "status": "ok",
+            "attempt": 1
+          },
+          {
+            "name": "self_heal_post",
+            "status": "ok",
+            "attempt": 1
+          }
+        ]
+      }
+    },
+    {
+      "engine": "self_heal",
+      "timestamp": "2026-11-23T19:59:18Z",
+      "duration_s": 0.0,
+      "details": {
+        "errors_before": 0,
+        "errors_after": 0,
+        "market_repaired": false,
+        "traders_repaired": 0,
+        "strict": false
+      }
+    },
+    {
+      "engine": "price",
+      "timestamp": "2026-11-23T20:11:06Z",
+      "duration_s": 708.35,
+      "details": {
+        "stocks_updated": 88,
+        "traders_recalculated": 2,
+        "api_failures": 88
+      }
+    },
+    {
+      "engine": "events",
+      "timestamp": "2026-11-23T20:11:55Z",
+      "duration_s": 49.28,
+      "details": {
+        "total_events": 1,
+        "dividends": 1,
+        "ipos": 0,
+        "margin_calls": 0,
+        "achievements": 0,
+        "history_rotated": 0
+      }
+    },
+    {
+      "engine": "self_heal",
+      "timestamp": "2026-11-23T20:12:04Z",
+      "duration_s": 0.0,
+      "details": {
+        "errors_before": 0,
+        "errors_after": 0,
+        "market_repaired": false,
+        "traders_repaired": 0,
+        "strict": true
+      }
+    },
+    {
+      "engine": "agentr_orchestrator",
+      "timestamp": "2026-11-23T20:12:04Z",
+      "duration_s": 766.71,
       "details": {
         "status": "ok",
         "steps": [
