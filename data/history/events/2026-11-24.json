@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-24",
+  "events": [
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 2.65,
+      "total_paid": 7.95,
+      "recipients": 1,
+      "commits_week": 264,
+      "timestamp": "2026-11-24T04:53:34Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 2.53,
+      "total_paid": 12.65,
+      "recipients": 1,
+      "commits_week": 67,
+      "timestamp": "2026-11-24T04:53:34Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "reavideo",
+      "full_name": "JuneYaooo/rea-video",
+      "initial_price": 175.35,
+      "stars_at_ipo": 12742,
+      "timestamp": "2026-11-24T04:53:34Z"
+    },
+    {
+      "type": "CRASH",
+      "ticker": "leonida",
+      "full_name": "ItsNotRexed/Leonida",
+      "reason": "deleted/not found",
+      "prev_price": 590.49,
+      "affected_holders": 0,
+      "timestamp": "2026-11-24T04:53:34Z"
+    }
+  ]
+}
