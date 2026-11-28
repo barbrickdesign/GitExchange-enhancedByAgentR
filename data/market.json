@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-11-28T06:58:09Z",
+  "last_updated": "2026-11-28T07:09:40Z",
   "market_status": "open",
-  "total_market_cap": 10506010.0,
+  "total_market_cap": 10702115.0,
   "stocks": {
     "react": {
       "full_name": "facebook/react",
@@ -2155,6 +2155,46 @@
         "mint": "CFB81yp47VXeypR9VPqVdPPPtfVVTc47P4H5TzfWpump",
         "symbol": "OKK"
       }
+    },
+    "victory": {
+      "full_name": "Marvisak/VIctory",
+      "price": 220.4,
+      "prev_price": 220.4,
+      "change_pct": 0.0,
+      "volume_24h": 0,
+      "market_cap": 110200.0,
+      "shares_outstanding": 500,
+      "ipo_date": "2026-11-28",
+      "metrics": {
+        "stars": 13884,
+        "forks": 2412,
+        "commits_week": 464,
+        "issue_response_hrs": 41.2,
+        "contributors": 129
+      },
+      "tags": [
+        "ipo-new"
+      ]
+    },
+    "hghub": {
+      "full_name": "Minireel/HGhub",
+      "price": 171.81,
+      "prev_price": 171.81,
+      "change_pct": 0.0,
+      "volume_24h": 0,
+      "market_cap": 85905.0,
+      "shares_outstanding": 500,
+      "ipo_date": "2026-11-28",
+      "metrics": {
+        "stars": 12271,
+        "forks": 9295,
+        "commits_week": 7,
+        "issue_response_hrs": 169.5,
+        "contributors": 3
+      },
+      "tags": [
+        "ipo-new"
+      ]
     }
   },
   "governing_token": {

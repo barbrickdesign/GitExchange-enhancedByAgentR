@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-28",
+  "events": [
+    {
+      "type": "DIVIDEND",
+      "ticker": "vscode",
+      "amount_per_share": 2.73,
+      "total_paid": 8.19,
+      "recipients": 1,
+      "commits_week": 1053,
+      "timestamp": "2026-11-28T07:09:40Z"
+    },
+    {
+      "type": "DIVIDEND",
+      "ticker": "nextjs",
+      "amount_per_share": 1.7,
+      "total_paid": 8.5,
+      "recipients": 1,
+      "commits_week": 174,
+      "timestamp": "2026-11-28T07:09:40Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "victory",
+      "full_name": "Marvisak/VIctory",
+      "initial_price": 220.4,
+      "stars_at_ipo": 13884,
+      "timestamp": "2026-11-28T07:09:40Z"
+    },
+    {
+      "type": "IPO",
+      "ticker": "hghub",
+      "full_name": "Minireel/HGhub",
+      "initial_price": 171.81,
+      "stars_at_ipo": 12271,
+      "timestamp": "2026-11-28T07:09:40Z"
+    }
+  ]
+}
